@@ -1,0 +1,7 @@
+Size form : 1100;650
+
+
+txt  : tên textbox
+cb  : tên combobox
+frm  : tên form
+b  : tên button
