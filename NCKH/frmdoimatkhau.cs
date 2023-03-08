@@ -25,7 +25,7 @@ namespace NCKH
         {
             if (txbMatKhauCu.Text == "")
             {
-                MessageBox.Show("Chưa điền mật khẩu cũ","Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Chưa điền mật khẩu cũ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbMatKhauCu.Focus();
             }
             else if (txbMatKhauMoi.Text == "")

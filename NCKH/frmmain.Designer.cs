@@ -33,6 +33,7 @@
             this.mniDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,14 +61,14 @@
             // mniDoiMatKhau
             // 
             this.mniDoiMatKhau.Name = "mniDoiMatKhau";
-            this.mniDoiMatKhau.Size = new System.Drawing.Size(224, 26);
+            this.mniDoiMatKhau.Size = new System.Drawing.Size(207, 26);
             this.mniDoiMatKhau.Text = "Đổi mật khẩu";
             this.mniDoiMatKhau.Click += new System.EventHandler(this.mniDoiMatKhau_Click_1);
             // 
             // quảnLýTàiKhoảnToolStripMenuItem
             // 
             this.quảnLýTàiKhoảnToolStripMenuItem.Name = "quảnLýTàiKhoảnToolStripMenuItem";
-            this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản lý tài khoản";
             this.quảnLýTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTàiKhoảnToolStripMenuItem_Click);
             // 
@@ -77,11 +78,21 @@
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 82);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 59);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 513);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -101,5 +112,6 @@
         private System.Windows.Forms.ToolStripMenuItem mniDoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }
