@@ -15,6 +15,72 @@ namespace NCKH
         public frmMain()
         {
             InitializeComponent();
+            hideBut();
+        }
+        private void hideBut()
+        {
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+        }
+
+        private void hidePanel3()
+        {
+            if (panel3.Visible == true)
+                panel3.Visible = false;
+            //if(panel4.Visible == true)
+            //panel4.Visible = false;
+            //if(panel5.Visible == true) 
+            //panel5.Visible = false;
+        }
+        private void hidePanel4()
+        {
+            //if (panel3.Visible == true)
+            //panel3.Visible = false;
+            if (panel4.Visible == true)
+                panel4.Visible = false;
+            //if (panel5.Visible == true)
+            //panel5.Visible = false;
+        }
+        private void hidePanel5()
+        {
+            //if (panel3.Visible == true)
+            panel3.Visible = false;
+            //if (panel4.Visible == true)
+            panel4.Visible = false;
+            if (panel5.Visible == true)
+                panel5.Visible = false;
+        }
+        private void showPanel3(Panel panel3)
+        {
+            if (panel3.Visible == false)
+            {
+                hidePanel3();
+                panel3.Visible = true;
+            }
+            else
+                panel3.Visible = false;
+        }
+        private void showPanel4(Panel panel4)
+        {
+            if (panel4.Visible == false)
+            {
+                hidePanel4();
+                panel4.Visible = true;
+            }
+            else
+                panel4.Visible = false;
+        }
+        private void showPanel5(Panel panel5)
+        {
+            if (panel5.Visible == false)
+            {
+                panel5.Visible = true;
+                button11.Hide();
+                button13.Hide();
+            }
+            else
+                panel5.Visible = false;
         }
         private void mniDoiMatKhau_Click_1(object sender, EventArgs e)
         {
@@ -32,8 +98,70 @@ namespace NCKH
         private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmQuanLyTaiKhoan frmDMK = new frmQuanLyTaiKhoan();
-            
+
             frmDMK.Show();
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showPanel3(panel3);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //hidePanel3();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmDoiMatKhau());
+            //hidePanel3();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            showPanel4(panel4);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            showPanel5(panel5);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (button11.Visible == false)
+            {
+                button11.Show();
+            }
+            else
+                button11.Hide();
+        }
+
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (button13.Visible == false)
+            {
+                button13.Show();
+            }
+            else
+                button13.Hide();
+        }
+        private Form currentFormChild;
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentFormChild != null)
+                currentFormChild.Close();
+            currentFormChild = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel8.Controls.Add(childForm);
+            panel8.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }
