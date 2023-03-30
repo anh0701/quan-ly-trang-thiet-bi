@@ -117,7 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btoXoa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAK9JREFUOE/tlDEKAkEQBDcz1CcZ+CMDQQz8hob+Qi4wNzLRzC+IvkC7lp1hkMXT
+        QxO5hoKeZqbZaNMbGomTOIohQZuaFvbiXsDXdiK+/C1y6yUEXaEjvxDtRG3pE+hw/azwICbFw0ZMw4wn
+        s5ldbvDVQgvtYCnGYcaT2Yyeb7P6Qj/oC/+pcCsIz2JWPPB7rMKMJ7OZXW7wdLgWwpa6MheugViLm6gt
+        v+IqeLk6UnoAZScULILmAOUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btoSua.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAALpJREFUOE/V1D0OQUEUxfFprEaJwgJ0PipbYAlKGolKbxlUxDLYhsIGHv8rM8nL
+        nZmXO6/BSX7JM+84zQT3d5lhZdRHY6Z4FXhiiGzWkOIcvQYHmEY3kFL38ymf0KuPDhCl7aCQsyihuEfq
+        EoIrigbb+P7gw0u9E+bBCguELCFnumcePELnBN0zD8qN68iZ7pkHb+ggRJ7v0L3kYPjpaWeMvIs/0+S7
+        UUr/HOrGSGaCLXZG0s2O/WKcewN6R6oBigsQKAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btoThem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAHlJREFUOE9jGHLAH4jLScR+QIwVgCT+k4l9gRgD1AMxNsXEYJBeDNAAxNgUg/BV
+        KMYmB8IgvRgAn4HaUIxNDoSHgYF3gdgYCXNCMbIYSM3AGYiOB18YomOqG0hWwqZ61qOkcPABYqwAVGq0
+        AnEHkRikFqdhgxEwMAAAp9LFCtbgHuMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>39</value>
   </metadata>
 </root>

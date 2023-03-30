@@ -10,7 +10,7 @@ namespace NCKH
 {
     class Database
     {
-        private static string strConnection = @"Data Source=DESKTOP-PHTHSKI\SQLEXPRESS;Initial Catalog=QuanLyTrangThietBi;Integrated Security=True";
+        private static string strConnection = @"Data Source=LAPTOP-G10UU6CK\SQLEXPRESS;Initial Catalog=QuanLyTrangThietBi1;Integrated Security=True";
         public static void Execute(string strCommand, Dictionary<string, object> parameters)
         {
             //Bước 1: Sử dụng chuỗi kết nối để tạo đối tượng kết nối, và mở kết nối
@@ -23,6 +23,20 @@ namespace NCKH
             //Bước 3: Thực thi câu lệnh và đóng kết nối
             command.ExecuteNonQuery();
             connection.Close();
+        }
+        public static string LayMaKhoa(string a)
+        {
+            SqlConnection connection = new SqlConnection(strConnection);
+            connection.Open();
+            string str = "select * from TaiKhoan where TenDangNhap = '" + a + "'";
+            SqlCommand command = new SqlCommand(str, connection);
+            SqlDataReader RD = command.ExecuteReader();
+            if (RD.Read())
+            {
+                str = RD[6].ToString();
+            }
+            connection.Close();
+            return str;
         }
         public static DataTable Query(string strQuery, Dictionary<string, object> parameters)
         {
