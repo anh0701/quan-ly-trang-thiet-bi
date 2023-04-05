@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace NCKH
 {
@@ -127,6 +128,7 @@ namespace NCKH
         private void button9_Click(object sender, EventArgs e)
         {
             showPanel5(panel5);
+            //OpenChildForm(new frmphongmay());
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -162,6 +164,21 @@ namespace NCKH
             panel8.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("http://www.vimaru.edu.vn/");
         }
     }
 }
