@@ -45,6 +45,9 @@ namespace NCKH
                 }
                 authentication = true;
                 Program.TenDangNhap = txtUsername.Text;
+                Program.Khoa = Database.LayMaKhoa(txtUsername.Text);
+                Program.TenKiThuatVien = Database.LayTenKTV(txtUsername.Text);
+                Program.Quyen = Database.LayQuyen(txtUsername.Text);
                 frmMain f = new frmMain();
                 f.Show();
 
@@ -65,6 +68,11 @@ namespace NCKH
         }
 
         private void frmdangnhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDangNhap_Load_1(object sender, EventArgs e)
         {
 
         }

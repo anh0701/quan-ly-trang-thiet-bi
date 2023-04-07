@@ -38,6 +38,34 @@ namespace NCKH
             connection.Close();
             return str;
         }
+        public static string LayQuyen(string a)
+        {
+            SqlConnection connection = new SqlConnection(strConnection);
+            connection.Open();
+            string str = "select * from TaiKhoan where TenDangNhap = '" + a + "'";
+            SqlCommand command = new SqlCommand(str, connection);
+            SqlDataReader RD = command.ExecuteReader();
+            if (RD.Read())
+            {
+                str = RD[5].ToString();
+            }
+            connection.Close();
+            return str;
+        }
+        public static string LayTenKTV(string a)
+        {
+            SqlConnection connection = new SqlConnection(strConnection);
+            connection.Open();
+            string str = "select * from TaiKhoan where TenDangNhap = '" + a + "'";
+            SqlCommand command = new SqlCommand(str, connection);
+            SqlDataReader RD = command.ExecuteReader();
+            if (RD.Read())
+            {
+                str = RD[2].ToString();
+            }
+            connection.Close();
+            return str;
+        }
         public static DataTable Query(string strQuery, Dictionary<string, object> parameters)
         {
             //Bước 1: Sử dụng chuỗi kết nối để tạo đối tượng kết nối, và mở kết nối

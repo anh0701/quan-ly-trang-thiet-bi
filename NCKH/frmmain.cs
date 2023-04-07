@@ -128,7 +128,15 @@ namespace NCKH
         private void button9_Click(object sender, EventArgs e)
         {
             showPanel5(panel5);
-            //OpenChildForm(new frmphongmay());
+            if (Program.Quyen == "admin")
+            {
+                OpenChildForm(new FrmQuanLyPhongChoKTV());
+            }
+            else 
+            {
+                
+            }
+            
         }
 
         private void button10_Click(object sender, EventArgs e)
