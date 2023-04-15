@@ -22,7 +22,7 @@ namespace NCKH
             string strQuery = "SELECT * FROM ChiTietTrangThietBiCoTrongPhong";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             DataTable table = Database.Query(strQuery, parameters);
-            dataGridView1.DataSource = table;
+            dtgrvChiTiet.DataSource = table;
 
         }
         private void FrmThemTTBVaoPhong_Load(object sender, EventArgs e)

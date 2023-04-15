@@ -1,7 +1,6 @@
-﻿
-namespace NCKH
+﻿namespace NCKH
 {
-    partial class FrmThemTTBVaoPhong
+    partial class frmMayTinhTrongPhong
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +28,10 @@ namespace NCKH
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.txbTenMayTinh = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txbTenPhong = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txbMaPhong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,47 +43,53 @@ namespace NCKH
             this.btnThem = new System.Windows.Forms.Button();
             this.cbDonVi = new System.Windows.Forms.ComboBox();
             this.dupSoLuong = new System.Windows.Forms.DomainUpDown();
-            this.cbMaTrangThietBi = new System.Windows.Forms.ComboBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dtgrvChiTiet = new System.Windows.Forms.DataGridView();
-            this.ColMaChiTietTrangThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.cbMaMayTinh = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ColMaChiTietMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaTrangThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMaMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txbTenPhong = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbTenTrangThietBi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvChiTiet)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel3
+            // txbTenMayTinh
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.txbTenTrangThietBi);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txbTenPhong);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.txbMaPhong);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.btnSua);
-            this.panel3.Controls.Add(this.btnThoat);
-            this.panel3.Controls.Add(this.btnXoa);
-            this.panel3.Controls.Add(this.btnThem);
-            this.panel3.Controls.Add(this.cbDonVi);
-            this.panel3.Controls.Add(this.dupSoLuong);
-            this.panel3.Controls.Add(this.cbMaTrangThietBi);
-            this.panel3.Location = new System.Drawing.Point(1, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 138);
-            this.panel3.TabIndex = 4;
+            this.txbTenMayTinh.Location = new System.Drawing.Point(392, 79);
+            this.txbTenMayTinh.Name = "txbTenMayTinh";
+            this.txbTenMayTinh.ReadOnly = true;
+            this.txbTenMayTinh.Size = new System.Drawing.Size(121, 22);
+            this.txbTenMayTinh.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(270, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Tên máy tính:";
+            // 
+            // txbTenPhong
+            // 
+            this.txbTenPhong.Location = new System.Drawing.Point(392, 25);
+            this.txbTenPhong.Name = "txbTenPhong";
+            this.txbTenPhong.ReadOnly = true;
+            this.txbTenPhong.Size = new System.Drawing.Size(121, 22);
+            this.txbTenPhong.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(270, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Tên phòng:";
             // 
             // txbMaPhong
             // 
@@ -96,9 +104,9 @@ namespace NCKH
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 16);
+            this.label4.Size = new System.Drawing.Size(81, 16);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Mã trang thiết bị:";
+            this.label4.Text = "Mã máy tính:";
             // 
             // label2
             // 
@@ -178,25 +186,6 @@ namespace NCKH
             this.dupSoLuong.Size = new System.Drawing.Size(120, 22);
             this.dupSoLuong.TabIndex = 1;
             // 
-            // cbMaTrangThietBi
-            // 
-            this.cbMaTrangThietBi.FormattingEnabled = true;
-            this.cbMaTrangThietBi.Location = new System.Drawing.Point(134, 77);
-            this.cbMaTrangThietBi.Name = "cbMaTrangThietBi";
-            this.cbMaTrangThietBi.Size = new System.Drawing.Size(121, 24);
-            this.cbMaTrangThietBi.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dtgrvChiTiet);
-            this.panel2.Location = new System.Drawing.Point(2, 135);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(983, 372);
-            this.panel2.TabIndex = 3;
-            // 
             // dtgrvChiTiet
             // 
             this.dtgrvChiTiet.AllowUserToAddRows = false;
@@ -206,26 +195,70 @@ namespace NCKH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgrvChiTiet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvChiTiet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColMaChiTietTrangThietBi,
+            this.ColMaChiTietMayTinh,
             this.ColMaPhong,
-            this.ColMaTrangThietBi,
+            this.ColMaMayTinh,
             this.ColSoLuong,
             this.ColDonVi});
-            this.dtgrvChiTiet.Location = new System.Drawing.Point(3, 11);
+            this.dtgrvChiTiet.Location = new System.Drawing.Point(3, 7);
             this.dtgrvChiTiet.Name = "dtgrvChiTiet";
             this.dtgrvChiTiet.RowHeadersWidth = 51;
             this.dtgrvChiTiet.RowTemplate.Height = 24;
             this.dtgrvChiTiet.Size = new System.Drawing.Size(977, 358);
             this.dtgrvChiTiet.TabIndex = 0;
             // 
-            // ColMaChiTietTrangThietBi
+            // panel2
             // 
-            this.ColMaChiTietTrangThietBi.DataPropertyName = "MaChiTietTrangThietBiCoTrongPhong";
-            this.ColMaChiTietTrangThietBi.FillWeight = 50F;
-            this.ColMaChiTietTrangThietBi.HeaderText = "STT";
-            this.ColMaChiTietTrangThietBi.MinimumWidth = 6;
-            this.ColMaChiTietTrangThietBi.Name = "ColMaChiTietTrangThietBi";
-            this.ColMaChiTietTrangThietBi.Width = 125;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.dtgrvChiTiet);
+            this.panel2.Location = new System.Drawing.Point(2, 139);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(983, 372);
+            this.panel2.TabIndex = 5;
+            // 
+            // cbMaMayTinh
+            // 
+            this.cbMaMayTinh.FormattingEnabled = true;
+            this.cbMaMayTinh.Location = new System.Drawing.Point(134, 77);
+            this.cbMaMayTinh.Name = "cbMaMayTinh";
+            this.cbMaMayTinh.Size = new System.Drawing.Size(121, 24);
+            this.cbMaMayTinh.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.txbTenMayTinh);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.txbTenPhong);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.txbMaPhong);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.btnSua);
+            this.panel3.Controls.Add(this.btnThoat);
+            this.panel3.Controls.Add(this.btnXoa);
+            this.panel3.Controls.Add(this.btnThem);
+            this.panel3.Controls.Add(this.cbDonVi);
+            this.panel3.Controls.Add(this.dupSoLuong);
+            this.panel3.Controls.Add(this.cbMaMayTinh);
+            this.panel3.Location = new System.Drawing.Point(1, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(984, 138);
+            this.panel3.TabIndex = 6;
+            // 
+            // ColMaChiTietMayTinh
+            // 
+            this.ColMaChiTietMayTinh.DataPropertyName = "MaChiTietMayTinhCoTrongPhong";
+            this.ColMaChiTietMayTinh.FillWeight = 50F;
+            this.ColMaChiTietMayTinh.HeaderText = "STT";
+            this.ColMaChiTietMayTinh.MinimumWidth = 6;
+            this.ColMaChiTietMayTinh.Name = "ColMaChiTietMayTinh";
+            this.ColMaChiTietMayTinh.Width = 125;
             // 
             // ColMaPhong
             // 
@@ -235,13 +268,13 @@ namespace NCKH
             this.ColMaPhong.MinimumWidth = 6;
             this.ColMaPhong.Name = "ColMaPhong";
             // 
-            // ColMaTrangThietBi
+            // ColMaMayTinh
             // 
-            this.ColMaTrangThietBi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMaTrangThietBi.DataPropertyName = "MaTrangThietBi";
-            this.ColMaTrangThietBi.HeaderText = "Mã trang thiết bị";
-            this.ColMaTrangThietBi.MinimumWidth = 6;
-            this.ColMaTrangThietBi.Name = "ColMaTrangThietBi";
+            this.ColMaMayTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMaMayTinh.DataPropertyName = "MaMayTinh";
+            this.ColMaMayTinh.HeaderText = "Mã máy tính";
+            this.ColMaMayTinh.MinimumWidth = 6;
+            this.ColMaMayTinh.Name = "ColMaMayTinh";
             // 
             // ColSoLuong
             // 
@@ -259,61 +292,28 @@ namespace NCKH
             this.ColDonVi.Name = "ColDonVi";
             this.ColDonVi.Width = 125;
             // 
-            // txbTenPhong
-            // 
-            this.txbTenPhong.Location = new System.Drawing.Point(392, 25);
-            this.txbTenPhong.Name = "txbTenPhong";
-            this.txbTenPhong.ReadOnly = true;
-            this.txbTenPhong.Size = new System.Drawing.Size(121, 22);
-            this.txbTenPhong.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(270, 27);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Tên phòng:";
-            // 
-            // txbTenTrangThietBi
-            // 
-            this.txbTenTrangThietBi.Location = new System.Drawing.Point(392, 79);
-            this.txbTenTrangThietBi.Name = "txbTenTrangThietBi";
-            this.txbTenTrangThietBi.ReadOnly = true;
-            this.txbTenTrangThietBi.Size = new System.Drawing.Size(121, 22);
-            this.txbTenTrangThietBi.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(270, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Tên trang thiết bị:";
-            // 
-            // FrmThemTTBVaoPhong
+            // frmMayTinhTrongPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 517);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Name = "FrmThemTTBVaoPhong";
-            this.Text = "Thêm trang thiết bị ";
-            this.Load += new System.EventHandler(this.FrmThemTTBVaoPhong_Load);
+            this.Controls.Add(this.panel3);
+            this.Name = "frmMayTinhTrongPhong";
+            this.Text = "Thêm máy tính";
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvChiTiet)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgrvChiTiet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txbTenMayTinh;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txbTenPhong;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbMaPhong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -325,17 +325,14 @@ namespace NCKH
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.ComboBox cbDonVi;
         private System.Windows.Forms.DomainUpDown dupSoLuong;
-        private System.Windows.Forms.ComboBox cbMaTrangThietBi;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dtgrvChiTiet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaChiTietTrangThietBi;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cbMaMayTinh;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaChiTietMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaPhong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaTrangThietBi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDonVi;
-        private System.Windows.Forms.TextBox txbTenTrangThietBi;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbTenPhong;
-        private System.Windows.Forms.Label label5;
     }
 }
