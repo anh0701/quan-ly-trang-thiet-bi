@@ -316,6 +316,7 @@ namespace NCKH
             this.txbtimkiem.Name = "txbtimkiem";
             this.txbtimkiem.Size = new System.Drawing.Size(643, 25);
             this.txbtimkiem.TabIndex = 57;
+            this.txbtimkiem.TextChanged += new System.EventHandler(this.txbtimkiem_TextChanged);
             // 
             // cbtimkiem
             // 

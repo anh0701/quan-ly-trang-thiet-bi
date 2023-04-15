@@ -16,5 +16,12 @@ namespace NCKH
         {
             InitializeComponent();
         }
+
+        private void txbtimkiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
