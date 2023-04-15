@@ -42,10 +42,10 @@
             // 
             // bDN
             // 
-            this.bDN.Location = new System.Drawing.Point(185, 378);
-            this.bDN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.bDN.Location = new System.Drawing.Point(247, 465);
+            this.bDN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bDN.Name = "bDN";
-            this.bDN.Size = new System.Drawing.Size(108, 36);
+            this.bDN.Size = new System.Drawing.Size(144, 44);
             this.bDN.TabIndex = 16;
             this.bDN.Text = "Đăng nhập";
             this.bDN.UseVisualStyleBackColor = true;
@@ -53,21 +53,21 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(149, 321);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPass.Location = new System.Drawing.Point(199, 395);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(179, 32);
+            this.txtPass.Size = new System.Drawing.Size(237, 38);
             this.txtPass.TabIndex = 13;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(149, 263);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtUsername.Location = new System.Drawing.Point(199, 324);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(179, 32);
+            this.txtUsername.Size = new System.Drawing.Size(237, 38);
             this.txtUsername.TabIndex = 12;
             // 
             // eprError
@@ -78,9 +78,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 189);
+            this.label3.Location = new System.Drawing.Point(39, 233);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(415, 26);
+            this.label3.Size = new System.Drawing.Size(518, 32);
             this.label3.TabIndex = 18;
             this.label3.Text = "TRƯỜNG ĐẠI HỌC HÀNG HẢI VIỆT NAM";
             // 
@@ -88,38 +89,40 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(97, 227);
+            this.label4.Location = new System.Drawing.Point(129, 279);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 18);
+            this.label4.Size = new System.Drawing.Size(378, 23);
             this.label4.TabIndex = 19;
             this.label4.Text = "Hệ thống quản lý trang thiết bị phòng thực hành";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NCKH.Properties.Resources.tải_xuống_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(173, 32);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(231, 39);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(173, 160);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(213)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(645, 567);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bDN);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsername);
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDangNhap";
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.eprError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -37,14 +37,13 @@ namespace NCKH
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string strCommand = "EXEC spSuaPhong @maPhong, @tenPhong, @maNguoiQuanLy, @maChucNangPhong, @trangThai, @maKhoa ";
+            string strCommand = "EXEC spSuaPhong @maPhong, @tenPhong, @maChucNangPhong, @trangThai, @maKhoa ";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@maPhong", txtMaPM.Text);
-            parameters.Add("@tenPhong", txtMaPM.Text);
-            parameters.Add("@maNguoiQuanLy", txtMaPM.Text);
-            parameters.Add("@maChucNangPhong", txtMaPM.Text);
-            parameters.Add("@trangThai", txtMaPM.Text);
-            parameters.Add("@maKhoa", txtMaPM.Text);
+            parameters.Add("@tenPhong", txtTenPM.Text);
+            parameters.Add("@maChucNangPhong", cbbMaChucNang.Text);
+            parameters.Add("@trangThai",cbbTrangThai.Text);
+            parameters.Add("@maKhoa", Program.Khoa);
             try
             {
                 Database.Execute(strCommand, parameters);
@@ -59,18 +58,13 @@ namespace NCKH
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string strCommand = "EXEC spThemPhong @maPhong, @tenPhong, @maNguoiQuanLy, @maChucNangPhong, @trangThai, @maKhoa ";
+            string strCommand = "EXEC spThemPhong @maPhong, @tenPhong, @maChucNangPhong, @trangThai, @maKhoa ";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@maPhong", txtMaPM.Text);
             parameters.Add("@tenPhong", txtTenPM.Text);
-            parameters.Add("@maNguoiQuanLy", txtNQL.Text);
-            parameters.Add("@maChucNangPhong", txtCNP.Text);
-            string check = "1";
-            if (rdBaoTri.Checked)
-            {
-                check = "0";
-            }
-            parameters.Add("@trangThai", check);
+            parameters.Add("@maChucNangPhong", cbbMaChucNang.Text);
+            parameters.Add("@trangThai",cbbTrangThai.Text);
+            parameters.Add("@maKhoa", Program.Khoa);
             try
             {
                 Database.Execute(strCommand, parameters);
@@ -86,7 +80,7 @@ namespace NCKH
 
         private void loaddgv()
         {
-            string strQuery = "SELECT MaPhong, TenPhong, MaNguoiQuanLy, MaChucNang, TrangThai, MaKhoa  FROM Phong";
+            string strQuery = "SELECT *  FROM Phong";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
 
             // parameters.Add("@email", "");
@@ -96,18 +90,12 @@ namespace NCKH
 
         private void btnTK_Click(object sender, EventArgs e)
         {
-            string str = "Select * from Phong where MaPhong = @maPhong or TenPhong like @tenPhong or MaNguoiQuanLy = @maNguoiQuanLy or MaChucNang = @maChucNangPhong or TrangThai = @trangThai ";
+            string str = "Select * from Phong where MaPhong = @maPhong or TenPhong like @tenPhong  or MaChucNang = @maChucNangPhong or TrangThai = @trangThai ";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@maPhong", txtMaPM.Text);
             parameters.Add("@tenPhong", txtTenPM.Text);
-            parameters.Add("@maNguoiQuanLy", txtNQL.Text);
-            parameters.Add("@maChucNangPhong", txtCNP.Text);
-            string check = "1";
-            if (rdBaoTri.Checked)
-            {
-                check = "0";
-            }
-            parameters.Add("@trangThai", check);
+            parameters.Add("@maChucNangPhong", cbbMaChucNang.Text);           
+            parameters.Add("@trangThai", cbbTrangThai.Text);
             DataTable table = Database.Query(str, parameters);
             dtgPhongMay.DataSource = table;
         }
@@ -116,19 +104,13 @@ namespace NCKH
         {
             txtMaPM.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clMaPM"].Value.ToString();
             txtTenPM.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clTenPM"].Value.ToString();
-            txtCNP.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clCN"].Value.ToString();
-            txtNQL.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clNgQL"].Value.ToString();
-            string trangthai = dtgPhongMay.Rows[e.RowIndex].Cells["clTrangThai"].Value.ToString();
-            if (trangthai == "1")
-            {
-                rdSanSang.Checked = true;
-            }
-            else
-            {
-                rdBaoTri.Checked = true;
-            }
+            cbbMaChucNang.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clCN"].Value.ToString();            
+            cbbTrangThai.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clTrangThai"].Value.ToString();
+        }
+
+        private void frmphongmay_Load(object sender, EventArgs e)
+        {
 
         }
     }
-}
 }

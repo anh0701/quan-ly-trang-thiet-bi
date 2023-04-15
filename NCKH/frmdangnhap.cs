@@ -25,24 +25,13 @@ namespace NCKH
         private void bDN_Click(object sender, EventArgs e)
         {
             eprError.Clear();
-            string strCommand = "EXEC spDangNhap @tenDangNhap, @matKhau";
-            string strcmd = "SELECT * from dbo.ufLayPhanQuyen ((select Quyen from TaiKhoan where TenDangNhap = @tenDangNhap))";
+            string strCommand = "EXEC spDangNhap @tenDangNhap, @matKhau";          
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@tenDangNhap", txtUsername.Text);
             parameters.Add("@matKhau", txtPass.Text);
             try
             {
-                Database.Execute(strCommand, parameters);
-                DataTable cn = Database.Query(strcmd, parameters);
-                int number_cols = cn.Columns.Count;
-                List<string> list = new List<string>();
-                foreach (DataRow row in cn.Rows)
-                {
-                    for (int i = 0; i < number_cols; i++)
-                    {
-                        list.Add(row[i].ToString());
-                    }
-                }
+                Database.Execute(strCommand, parameters);             
                 authentication = true;
                 Program.TenDangNhap = txtUsername.Text;
                 Program.Khoa = Database.LayMaKhoa(txtUsername.Text);
@@ -73,6 +62,11 @@ namespace NCKH
         }
 
         private void frmDangNhap_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmDangNhap_Load_2(object sender, EventArgs e)
         {
 
         }

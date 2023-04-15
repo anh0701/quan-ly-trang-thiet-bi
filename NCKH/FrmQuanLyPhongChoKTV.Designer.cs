@@ -30,18 +30,18 @@ namespace NCKH
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.TenKTV = new System.Windows.Forms.Label();
-            this.TenKhoa = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.TenKhoa = new System.Windows.Forms.Label();
+            this.TenKTV = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColChucNangPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,14 +57,26 @@ namespace NCKH
             this.panel1.Size = new System.Drawing.Size(1147, 100);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pictureBox2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1153, 546);
-            this.panel2.TabIndex = 1;
+            this.pictureBox2.Image = global::NCKH.Properties.Resources.tải_xuống_removebg_preview__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(85, 72);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // TenKhoa
+            // 
+            this.TenKhoa.AutoSize = true;
+            this.TenKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenKhoa.Location = new System.Drawing.Point(131, 34);
+            this.TenKhoa.Name = "TenKhoa";
+            this.TenKhoa.Size = new System.Drawing.Size(79, 29);
+            this.TenKhoa.TabIndex = 0;
+            this.TenKhoa.Text = "label1";
             // 
             // TenKTV
             // 
@@ -77,26 +89,14 @@ namespace NCKH
             this.TenKTV.TabIndex = 0;
             this.TenKTV.Text = "label1";
             // 
-            // TenKhoa
+            // panel2
             // 
-            this.TenKhoa.AutoSize = true;
-            this.TenKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenKhoa.Location = new System.Drawing.Point(131, 34);
-            this.TenKhoa.Name = "TenKhoa";
-            this.TenKhoa.Size = new System.Drawing.Size(79, 29);
-            this.TenKhoa.TabIndex = 0;
-            this.TenKhoa.Text = "label1";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::NCKH.Properties.Resources.tải_xuống_removebg_preview__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(85, 72);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1153, 546);
+            this.panel2.TabIndex = 1;
             // 
             // dataGridView1
             // 
@@ -141,7 +141,7 @@ namespace NCKH
             // ColChucNangPhong
             // 
             this.ColChucNangPhong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColChucNangPhong.DataPropertyName = "MaChucNangPhong";
+            this.ColChucNangPhong.DataPropertyName = "MaChucNang";
             this.ColChucNangPhong.HeaderText = "Chức năng phòng";
             this.ColChucNangPhong.MinimumWidth = 6;
             this.ColChucNangPhong.Name = "ColChucNangPhong";
@@ -168,8 +168,8 @@ namespace NCKH
             this.Load += new System.EventHandler(this.FrmQuanLyPhongChoKTV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

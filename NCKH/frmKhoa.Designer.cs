@@ -28,135 +28,213 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox2.SuspendLayout();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColMaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txbtimkiemTTB = new System.Windows.Forms.TextBox();
+            this.cbtimkiemTTB = new System.Windows.Forms.ComboBox();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox2
+            // panel1
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(8, 9);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(319, 377);
-            this.groupBox2.TabIndex = 83;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin";
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1153, 194);
+            this.panel1.TabIndex = 84;
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(6, 92);
+            this.button3.Location = new System.Drawing.Point(639, 76);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 24);
-            this.button3.TabIndex = 92;
+            this.button3.Size = new System.Drawing.Size(76, 27);
+            this.button3.TabIndex = 100;
             this.button3.Text = "Thêm";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(83, 92);
+            this.button2.Location = new System.Drawing.Point(737, 76);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 24);
-            this.button2.TabIndex = 91;
+            this.button2.Size = new System.Drawing.Size(76, 27);
+            this.button2.TabIndex = 99;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(160, 92);
+            this.button4.Location = new System.Drawing.Point(639, 143);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(71, 24);
-            this.button4.TabIndex = 90;
+            this.button4.Size = new System.Drawing.Size(76, 27);
+            this.button4.TabIndex = 98;
             this.button4.Text = "Xóa";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(237, 92);
+            this.button5.Location = new System.Drawing.Point(737, 144);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(71, 24);
-            this.button5.TabIndex = 89;
+            this.button5.Size = new System.Drawing.Size(76, 27);
+            this.button5.TabIndex = 97;
             this.button5.Text = "Đóng";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(160, 59);
+            this.textBox1.Location = new System.Drawing.Point(193, 143);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 27);
-            this.textBox1.TabIndex = 75;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(302, 249);
-            this.dataGridView1.TabIndex = 81;
+            this.textBox1.Size = new System.Drawing.Size(261, 27);
+            this.textBox1.TabIndex = 96;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(156, 32);
+            this.label2.Location = new System.Drawing.Point(189, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
-            this.label2.TabIndex = 74;
+            this.label2.Size = new System.Drawing.Size(93, 24);
+            this.label2.TabIndex = 95;
             this.label2.Text = "Tên Khoa";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(6, 59);
+            this.textBox2.Location = new System.Drawing.Point(193, 75);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 27);
-            this.textBox2.TabIndex = 67;
+            this.textBox2.Size = new System.Drawing.Size(261, 27);
+            this.textBox2.TabIndex = 94;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 32);
+            this.label5.Location = new System.Drawing.Point(189, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 22);
-            this.label5.TabIndex = 66;
+            this.label5.Size = new System.Drawing.Size(76, 24);
+            this.label5.TabIndex = 93;
             this.label5.Text = "ID Khoa";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.txbtimkiemTTB);
+            this.panel2.Controls.Add(this.cbtimkiemTTB);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(0, 194);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1153, 452);
+            this.panel2.TabIndex = 85;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColMaKhoa,
+            this.ColTenKhoa});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1147, 364);
+            this.dataGridView1.TabIndex = 82;
+            // 
+            // ColMaKhoa
+            // 
+            this.ColMaKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMaKhoa.DataPropertyName = "MaKhoa";
+            this.ColMaKhoa.HeaderText = "Mã khoa";
+            this.ColMaKhoa.MinimumWidth = 6;
+            this.ColMaKhoa.Name = "ColMaKhoa";
+            // 
+            // ColTenKhoa
+            // 
+            this.ColTenKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColTenKhoa.DataPropertyName = "TenKhoa";
+            this.ColTenKhoa.HeaderText = "Tên khoa";
+            this.ColTenKhoa.MinimumWidth = 6;
+            this.ColTenKhoa.Name = "ColTenKhoa";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 83;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txbtimkiemTTB
+            // 
+            this.txbtimkiemTTB.Location = new System.Drawing.Point(343, 7);
+            this.txbtimkiemTTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbtimkiemTTB.Multiline = true;
+            this.txbtimkiemTTB.Name = "txbtimkiemTTB";
+            this.txbtimkiemTTB.Size = new System.Drawing.Size(643, 25);
+            this.txbtimkiemTTB.TabIndex = 85;
+            // 
+            // cbtimkiemTTB
+            // 
+            this.cbtimkiemTTB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtimkiemTTB.FormattingEnabled = true;
+            this.cbtimkiemTTB.Location = new System.Drawing.Point(90, 7);
+            this.cbtimkiemTTB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbtimkiemTTB.Name = "cbtimkiemTTB";
+            this.cbtimkiemTTB.Size = new System.Drawing.Size(247, 24);
+            this.cbtimkiemTTB.TabIndex = 84;
             // 
             // frmKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 395);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1153, 646);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "frmKhoa";
             this.Text = "Cập Nhật Khoa";
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -164,15 +242,21 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTenKhoa;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txbtimkiemTTB;
+        private System.Windows.Forms.ComboBox cbtimkiemTTB;
     }
 }

@@ -112,6 +112,7 @@ namespace NCKH
         private void button2_Click(object sender, EventArgs e)
         {
             //hidePanel3();
+            OpenChildForm(new frmQuanLyTaiKhoan());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -128,15 +129,14 @@ namespace NCKH
         private void button9_Click(object sender, EventArgs e)
         {
             showPanel5(panel5);
-            if (Program.Quyen == "admin")
+            if (Program.Quyen == "Kĩ thuật viên")
             {
                 OpenChildForm(new FrmQuanLyPhongChoKTV());
             }
             else 
             {
-                
-            }
-            
+                OpenChildForm(new frmphongmay());
+            }           
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -152,6 +152,7 @@ namespace NCKH
 
         private void button12_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new frmMayTinh());
             if (button13.Visible == false)
             {
                 button13.Show();
@@ -187,6 +188,41 @@ namespace NCKH
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("http://www.vimaru.edu.vn/");
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmQuanLyThietBiMayTinh());
+        }
+
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmKhoa());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmMonHoc());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmPhanMem());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmDonVi());
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmLoaiTrangThietBi());
         }
     }
 }
