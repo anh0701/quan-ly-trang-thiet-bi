@@ -46,6 +46,9 @@
             this.ColMaChiTietMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMaPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txbtimkiem = new System.Windows.Forms.TextBox();
+            this.cbtimkiem = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvChiTiet)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -159,11 +162,11 @@
             this.ColMaChiTietMonHoc,
             this.ColMaPhong,
             this.ColMaMonHoc});
-            this.dtgrvChiTiet.Location = new System.Drawing.Point(3, 11);
+            this.dtgrvChiTiet.Location = new System.Drawing.Point(3, 35);
             this.dtgrvChiTiet.Name = "dtgrvChiTiet";
             this.dtgrvChiTiet.RowHeadersWidth = 51;
             this.dtgrvChiTiet.RowTemplate.Height = 24;
-            this.dtgrvChiTiet.Size = new System.Drawing.Size(977, 358);
+            this.dtgrvChiTiet.Size = new System.Drawing.Size(977, 334);
             this.dtgrvChiTiet.TabIndex = 0;
             // 
             // panel2
@@ -171,6 +174,9 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.txbtimkiem);
+            this.panel2.Controls.Add(this.cbtimkiem);
             this.panel2.Controls.Add(this.dtgrvChiTiet);
             this.panel2.Location = new System.Drawing.Point(2, 139);
             this.panel2.Name = "panel2";
@@ -231,6 +237,34 @@
             this.ColMaMonHoc.MinimumWidth = 6;
             this.ColMaMonHoc.Name = "ColMaMonHoc";
             // 
+            // txbtimkiem
+            // 
+            this.txbtimkiem.Location = new System.Drawing.Point(337, 7);
+            this.txbtimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbtimkiem.Multiline = true;
+            this.txbtimkiem.Name = "txbtimkiem";
+            this.txbtimkiem.Size = new System.Drawing.Size(636, 25);
+            this.txbtimkiem.TabIndex = 51;
+            // 
+            // cbtimkiem
+            // 
+            this.cbtimkiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtimkiem.FormattingEnabled = true;
+            this.cbtimkiem.Location = new System.Drawing.Point(84, 7);
+            this.cbtimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbtimkiem.Name = "cbtimkiem";
+            this.cbtimkiem.Size = new System.Drawing.Size(247, 24);
+            this.cbtimkiem.TabIndex = 50;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmMonHocTrongPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -242,6 +276,7 @@
             this.Text = "Thêm môn học";
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvChiTiet)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -267,5 +302,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaChiTietMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaMonHoc;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txbtimkiem;
+        private System.Windows.Forms.ComboBox cbtimkiem;
     }
 }

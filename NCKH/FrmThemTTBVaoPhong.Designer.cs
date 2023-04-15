@@ -53,6 +53,9 @@ namespace NCKH
             this.label5 = new System.Windows.Forms.Label();
             this.txbTenTrangThietBi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txbtimkiem = new System.Windows.Forms.TextBox();
+            this.cbtimkiem = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvChiTiet)).BeginInit();
@@ -191,6 +194,9 @@ namespace NCKH
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.txbtimkiem);
+            this.panel2.Controls.Add(this.cbtimkiem);
             this.panel2.Controls.Add(this.dtgrvChiTiet);
             this.panel2.Location = new System.Drawing.Point(2, 135);
             this.panel2.Name = "panel2";
@@ -211,11 +217,11 @@ namespace NCKH
             this.ColMaTrangThietBi,
             this.ColSoLuong,
             this.ColDonVi});
-            this.dtgrvChiTiet.Location = new System.Drawing.Point(3, 11);
+            this.dtgrvChiTiet.Location = new System.Drawing.Point(3, 39);
             this.dtgrvChiTiet.Name = "dtgrvChiTiet";
             this.dtgrvChiTiet.RowHeadersWidth = 51;
             this.dtgrvChiTiet.RowTemplate.Height = 24;
-            this.dtgrvChiTiet.Size = new System.Drawing.Size(977, 358);
+            this.dtgrvChiTiet.Size = new System.Drawing.Size(977, 330);
             this.dtgrvChiTiet.TabIndex = 0;
             // 
             // ColMaChiTietTrangThietBi
@@ -293,6 +299,34 @@ namespace NCKH
             this.label6.TabIndex = 8;
             this.label6.Text = "Tên trang thiết bị:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // txbtimkiem
+            // 
+            this.txbtimkiem.Location = new System.Drawing.Point(337, 10);
+            this.txbtimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txbtimkiem.Multiline = true;
+            this.txbtimkiem.Name = "txbtimkiem";
+            this.txbtimkiem.Size = new System.Drawing.Size(643, 25);
+            this.txbtimkiem.TabIndex = 57;
+            // 
+            // cbtimkiem
+            // 
+            this.cbtimkiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbtimkiem.FormattingEnabled = true;
+            this.cbtimkiem.Location = new System.Drawing.Point(84, 10);
+            this.cbtimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbtimkiem.Name = "cbtimkiem";
+            this.cbtimkiem.Size = new System.Drawing.Size(247, 24);
+            this.cbtimkiem.TabIndex = 56;
+            // 
             // FrmThemTTBVaoPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -306,6 +340,7 @@ namespace NCKH
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvChiTiet)).EndInit();
             this.ResumeLayout(false);
 
@@ -337,5 +372,8 @@ namespace NCKH
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txbTenPhong;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txbtimkiem;
+        private System.Windows.Forms.ComboBox cbtimkiem;
     }
 }
