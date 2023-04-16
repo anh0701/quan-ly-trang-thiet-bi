@@ -12,12 +12,48 @@ namespace NCKH
 {
     public partial class frmQuanLyThietBiMayTinh : Form
     {
+        private void loaddtgrvChuot()
+        {
+            string strQuery = "SELECT * FROM Chuot";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            DataTable table = Database.Query(strQuery, parameters);
+            dtgrvChuot.DataSource = table;
 
-      
+        }
+        private void loaddtgrvBanPhim()
+        {
+            string strQuery = "SELECT * FROM Chuot";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            DataTable table = Database.Query(strQuery, parameters);
+            dtgrvBanPhim.DataSource = table;
+
+        }
+        private void loaddtgrvManHinh()
+        {
+            string strQuery = "SELECT * FROM Chuot";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            DataTable table = Database.Query(strQuery, parameters);
+            dtgrvManHinh.DataSource = table;
+
+        }
+        private void loaddtgrvCase()
+        {
+            string strQuery = "SELECT * FROM Chuot";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            DataTable table = Database.Query(strQuery, parameters);
+            dtgrvCase.DataSource = table;
+
+        }
+
         public frmQuanLyThietBiMayTinh()
         {
             InitializeComponent();
-            
+            loaddtgrvChuot();
+            loaddtgrvBanPhim();
+            loaddtgrvManHinh();
+            loaddtgrvCase();
+
+
         }
 
         private void frmQuanLyThietBiMayTinh_Load(object sender, EventArgs e)

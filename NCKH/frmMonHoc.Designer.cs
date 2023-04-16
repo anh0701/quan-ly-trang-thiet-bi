@@ -38,15 +38,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtgrvMonHoc = new System.Windows.Forms.DataGridView();
+            this.MaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.txbtimkiemTTB = new System.Windows.Forms.TextBox();
             this.cbtimkiemTTB = new System.Windows.Forms.ComboBox();
-            this.dtgvMonHoc = new System.Windows.Forms.DataGridView();
-            this.MaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvMonHoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvMonHoc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,7 +123,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(161, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 24);
+            this.label2.Size = new System.Drawing.Size(118, 22);
             this.label2.TabIndex = 104;
             this.label2.Text = "Tên Môn Học";
             // 
@@ -141,7 +141,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(161, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 24);
+            this.label5.Size = new System.Drawing.Size(103, 22);
             this.label5.TabIndex = 102;
             this.label5.Text = "ID Môn Học";
             // 
@@ -150,7 +150,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dtgvMonHoc);
+            this.panel2.Controls.Add(this.dtgrvMonHoc);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txbtimkiemTTB);
             this.panel2.Controls.Add(this.cbtimkiemTTB);
@@ -158,6 +158,40 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1153, 459);
             this.panel2.TabIndex = 1;
+            // 
+            // dtgrvMonHoc
+            // 
+            this.dtgrvMonHoc.AllowUserToAddRows = false;
+            this.dtgrvMonHoc.AllowUserToDeleteRows = false;
+            this.dtgrvMonHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgrvMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaMonHoc,
+            this.TenMonHoc});
+            this.dtgrvMonHoc.Location = new System.Drawing.Point(3, 37);
+            this.dtgrvMonHoc.Name = "dtgrvMonHoc";
+            this.dtgrvMonHoc.RowHeadersWidth = 51;
+            this.dtgrvMonHoc.RowTemplate.Height = 24;
+            this.dtgrvMonHoc.Size = new System.Drawing.Size(1147, 419);
+            this.dtgrvMonHoc.TabIndex = 101;
+            // 
+            // MaMonHoc
+            // 
+            this.MaMonHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaMonHoc.DataPropertyName = "MaMonHoc";
+            this.MaMonHoc.HeaderText = "Mã Môn Học";
+            this.MaMonHoc.MinimumWidth = 6;
+            this.MaMonHoc.Name = "MaMonHoc";
+            // 
+            // TenMonHoc
+            // 
+            this.TenMonHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenMonHoc.DataPropertyName = "TenMonHoc";
+            this.TenMonHoc.HeaderText = "Tên Môn Học";
+            this.TenMonHoc.MinimumWidth = 6;
+            this.TenMonHoc.Name = "TenMonHoc";
             // 
             // button1
             // 
@@ -187,40 +221,6 @@
             this.cbtimkiemTTB.Size = new System.Drawing.Size(247, 24);
             this.cbtimkiemTTB.TabIndex = 99;
             // 
-            // dtgvMonHoc
-            // 
-            this.dtgvMonHoc.AllowUserToAddRows = false;
-            this.dtgvMonHoc.AllowUserToDeleteRows = false;
-            this.dtgvMonHoc.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaMonHoc,
-            this.TenMonHoc});
-            this.dtgvMonHoc.Location = new System.Drawing.Point(3, 37);
-            this.dtgvMonHoc.Name = "dtgvMonHoc";
-            this.dtgvMonHoc.RowHeadersWidth = 51;
-            this.dtgvMonHoc.RowTemplate.Height = 24;
-            this.dtgvMonHoc.Size = new System.Drawing.Size(1147, 419);
-            this.dtgvMonHoc.TabIndex = 101;
-            // 
-            // MaMonHoc
-            // 
-            this.MaMonHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaMonHoc.DataPropertyName = "MaMonHoc";
-            this.MaMonHoc.HeaderText = "Mã Môn Học";
-            this.MaMonHoc.MinimumWidth = 6;
-            this.MaMonHoc.Name = "MaMonHoc";
-            // 
-            // TenMonHoc
-            // 
-            this.TenMonHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenMonHoc.DataPropertyName = "TenMonHoc";
-            this.TenMonHoc.HeaderText = "Tên Môn Học";
-            this.TenMonHoc.MinimumWidth = 6;
-            this.TenMonHoc.Name = "TenMonHoc";
-            // 
             // frmMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,7 +234,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvMonHoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvMonHoc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,7 +254,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txbtimkiemTTB;
         private System.Windows.Forms.ComboBox cbtimkiemTTB;
-        private System.Windows.Forms.DataGridView dtgvMonHoc;
+        private System.Windows.Forms.DataGridView dtgrvMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
     }

@@ -12,11 +12,8 @@ namespace NCKH
 {
     public partial class frmphongmay : Form
     {
-        public frmphongmay()
-        {
-            InitializeComponent();
-            loaddgv();
-        }
+       
+        
 
         private void btnXoa_Click(object sender, EventArgs e)
         {

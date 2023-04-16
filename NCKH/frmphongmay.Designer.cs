@@ -71,7 +71,7 @@
             this.dtgPhongMay.RowTemplate.Height = 28;
             this.dtgPhongMay.Size = new System.Drawing.Size(1028, 510);
             this.dtgPhongMay.TabIndex = 0;
-            this.dtgPhongMay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPhongMay_CellClick);
+//            this.dtgPhongMay.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPhongMay_CellClick);
             // 
             // panel2
             // 
@@ -129,7 +129,7 @@
             this.btnTK.TabIndex = 8;
             this.btnTK.Text = "Tìm kiếm";
             this.btnTK.UseVisualStyleBackColor = true;
-            this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
+//            this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
             // 
             // txtTenPM
             // 
@@ -157,7 +157,7 @@
             this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+//            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -169,7 +169,7 @@
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+//            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -181,7 +181,7 @@
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+//            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel1
             // 
@@ -275,7 +275,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmphongmay";
             this.Text = "Phòng máy";
-            this.Load += new System.EventHandler(this.frmphongmay_Load);
+//            this.Load += new System.EventHandler(this.frmphongmay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgPhongMay)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

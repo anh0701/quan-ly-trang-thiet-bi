@@ -37,7 +37,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.txbtimkiemTTB = new System.Windows.Forms.TextBox();
             this.cbtimkiemTTB = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgrvMayTinh = new System.Windows.Forms.DataGridView();
             this.ColMaMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTenMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +72,7 @@
             this.cbMaTrangThietBi = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvMayTinh)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -138,7 +138,7 @@
             this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.txbtimkiemTTB);
             this.groupBox3.Controls.Add(this.cbtimkiemTTB);
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dtgrvMayTinh);
             this.groupBox3.Location = new System.Drawing.Point(5, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1186, 513);
@@ -175,15 +175,15 @@
             this.cbtimkiemTTB.Size = new System.Drawing.Size(247, 24);
             this.cbtimkiemTTB.TabIndex = 78;
             // 
-            // dataGridView1
+            // dtgrvMayTinh
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtgrvMayTinh.AllowUserToAddRows = false;
+            this.dtgrvMayTinh.AllowUserToDeleteRows = false;
+            this.dtgrvMayTinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgrvMayTinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvMayTinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColMaMayTinh,
             this.ColTenMayTinh,
             this.ColCase,
@@ -192,12 +192,12 @@
             this.ColBanPhim,
             this.ColChucNangMayTinh,
             this.ColTrangThai});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 46);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1180, 461);
-            this.dataGridView1.TabIndex = 76;
+            this.dtgrvMayTinh.Location = new System.Drawing.Point(6, 46);
+            this.dtgrvMayTinh.Name = "dtgrvMayTinh";
+            this.dtgrvMayTinh.RowHeadersWidth = 51;
+            this.dtgrvMayTinh.RowTemplate.Height = 24;
+            this.dtgrvMayTinh.Size = new System.Drawing.Size(1180, 461);
+            this.dtgrvMayTinh.TabIndex = 76;
             // 
             // ColMaMayTinh
             // 
@@ -417,7 +417,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(20, 94);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 17);
+            this.label9.Size = new System.Drawing.Size(86, 16);
             this.label9.TabIndex = 91;
             this.label9.Text = "Tên máy tính:";
             // 
@@ -437,7 +437,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(690, 48);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 17);
+            this.label14.Size = new System.Drawing.Size(42, 16);
             this.label14.TabIndex = 86;
             this.label14.Text = "Case:";
             // 
@@ -448,7 +448,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(690, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 17);
+            this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 87;
             this.label4.Text = "Chuột:";
             // 
@@ -459,7 +459,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(929, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 86;
             this.label3.Text = "Màn hình:";
             // 
@@ -470,7 +470,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(929, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 87;
             this.label2.Text = "Bàn phím:";
             // 
@@ -482,7 +482,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(370, 45);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(137, 17);
+            this.label11.Size = new System.Drawing.Size(125, 16);
             this.label11.TabIndex = 86;
             this.label11.Text = "Chức năng máy tính:";
             // 
@@ -494,7 +494,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(380, 95);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 17);
+            this.label12.Size = new System.Drawing.Size(70, 16);
             this.label12.TabIndex = 87;
             this.label12.Text = "Trạng thái:";
             // 
@@ -505,7 +505,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(20, 44);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 17);
+            this.label13.Size = new System.Drawing.Size(81, 16);
             this.label13.TabIndex = 88;
             this.label13.Text = "Mã máy tính:";
             // 
@@ -548,7 +548,7 @@
             this.panel3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvMayTinh)).EndInit();
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -587,7 +587,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txbtimkiemTTB;
         private System.Windows.Forms.ComboBox cbtimkiemTTB;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgrvMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTenMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCase;

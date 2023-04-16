@@ -38,15 +38,15 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ColMaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.txbtimkiemTTB = new System.Windows.Forms.TextBox();
             this.cbtimkiemTTB = new System.Windows.Forms.ComboBox();
+            this.dtgrvKhoa = new System.Windows.Forms.DataGridView();
+            this.ColMaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvKhoa)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,7 +124,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(189, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 24);
+            this.label2.Size = new System.Drawing.Size(89, 22);
             this.label2.TabIndex = 95;
             this.label2.Text = "Tên Khoa";
             // 
@@ -142,7 +142,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(189, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 24);
+            this.label5.Size = new System.Drawing.Size(74, 22);
             this.label5.TabIndex = 93;
             this.label5.Text = "ID Khoa";
             // 
@@ -154,45 +154,11 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.txbtimkiemTTB);
             this.panel2.Controls.Add(this.cbtimkiemTTB);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dtgrvKhoa);
             this.panel2.Location = new System.Drawing.Point(0, 194);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1153, 452);
             this.panel2.TabIndex = 85;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColMaKhoa,
-            this.ColTenKhoa});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 37);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1147, 364);
-            this.dataGridView1.TabIndex = 82;
-            // 
-            // ColMaKhoa
-            // 
-            this.ColMaKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMaKhoa.DataPropertyName = "MaKhoa";
-            this.ColMaKhoa.HeaderText = "Mã khoa";
-            this.ColMaKhoa.MinimumWidth = 6;
-            this.ColMaKhoa.Name = "ColMaKhoa";
-            // 
-            // ColTenKhoa
-            // 
-            this.ColTenKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColTenKhoa.DataPropertyName = "TenKhoa";
-            this.ColTenKhoa.HeaderText = "Tên khoa";
-            this.ColTenKhoa.MinimumWidth = 6;
-            this.ColTenKhoa.Name = "ColTenKhoa";
             // 
             // button1
             // 
@@ -222,6 +188,40 @@
             this.cbtimkiemTTB.Size = new System.Drawing.Size(247, 24);
             this.cbtimkiemTTB.TabIndex = 84;
             // 
+            // dtgrvKhoa
+            // 
+            this.dtgrvKhoa.AllowUserToAddRows = false;
+            this.dtgrvKhoa.AllowUserToDeleteRows = false;
+            this.dtgrvKhoa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgrvKhoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvKhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColMaKhoa,
+            this.ColTenKhoa});
+            this.dtgrvKhoa.Location = new System.Drawing.Point(3, 37);
+            this.dtgrvKhoa.Name = "dtgrvKhoa";
+            this.dtgrvKhoa.RowHeadersWidth = 51;
+            this.dtgrvKhoa.RowTemplate.Height = 24;
+            this.dtgrvKhoa.Size = new System.Drawing.Size(1147, 364);
+            this.dtgrvKhoa.TabIndex = 82;
+            // 
+            // ColMaKhoa
+            // 
+            this.ColMaKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMaKhoa.DataPropertyName = "MaKhoa";
+            this.ColMaKhoa.HeaderText = "Mã khoa";
+            this.ColMaKhoa.MinimumWidth = 6;
+            this.ColMaKhoa.Name = "ColMaKhoa";
+            // 
+            // ColTenKhoa
+            // 
+            this.ColTenKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColTenKhoa.DataPropertyName = "TenKhoa";
+            this.ColTenKhoa.HeaderText = "Tên khoa";
+            this.ColTenKhoa.MinimumWidth = 6;
+            this.ColTenKhoa.Name = "ColTenKhoa";
+            // 
             // frmKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,7 +235,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvKhoa)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,7 +252,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgrvKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTenKhoa;
         private System.Windows.Forms.Button button1;

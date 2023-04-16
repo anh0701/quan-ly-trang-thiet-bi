@@ -16,14 +16,14 @@ namespace NCKH
         public frmMonHoc()
         {
             InitializeComponent();
-            loaddtgvMonHoc();
+            loaddtgrvMonHoc();
         }
-        private void loaddtgvMonHoc()
+        private void loaddtgrvMonHoc()
         {
             string strQuery = "SELECT * FROM MonHoc";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             DataTable table = Database.Query(strQuery, parameters);
-            dtgvMonHoc.DataSource = table;
+            dtgrvMonHoc.DataSource = table;
 
         }
     }
