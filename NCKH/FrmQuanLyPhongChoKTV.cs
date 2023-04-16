@@ -63,7 +63,17 @@ namespace NCKH
         private void chinhSua_Click(object sender, EventArgs e)
         {
             FrmThemTrangThietBi form2 = new FrmThemTrangThietBi();
-            form2.Show();
+            form2.txbMaPhongMH.Text = form2.txbMaPhongMT.Text = form2.txbMaPhongPM.Text = form2.txbMaPhongTTB.Text = MaPhong;
+            form2.txbTenPhongMH.Text = form2.txbTenPhongMT.Text = form2.txbTenPhongPM.Text = form2.txbTenPhongTTB.Text = TenPhong;
+            form2.ShowDialog();
+        }
+        string MaPhong;
+        string TenPhong;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow i = dataGridView1.Rows[e.RowIndex];
+            MaPhong = i.Cells["ColMaPhong"].Value.ToString();
+            TenPhong = i.Cells["ColTenPhong"].Value.ToString();
         }
     }
 }
