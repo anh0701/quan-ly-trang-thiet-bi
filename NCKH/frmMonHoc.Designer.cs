@@ -69,7 +69,7 @@
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(723, 62);
+            this.button3.Location = new System.Drawing.Point(760, 62);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(76, 27);
             this.button3.TabIndex = 109;
@@ -80,7 +80,7 @@
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(823, 120);
+            this.button5.Location = new System.Drawing.Point(860, 120);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 27);
             this.button5.TabIndex = 107;
@@ -91,7 +91,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(823, 62);
+            this.button2.Location = new System.Drawing.Point(860, 62);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 27);
             this.button2.TabIndex = 108;
@@ -102,7 +102,7 @@
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(723, 120);
+            this.button4.Location = new System.Drawing.Point(760, 120);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 27);
             this.button4.TabIndex = 106;
@@ -121,9 +121,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(161, 100);
+            this.label2.Location = new System.Drawing.Point(12, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 22);
+            this.label2.Size = new System.Drawing.Size(127, 24);
             this.label2.TabIndex = 104;
             this.label2.Text = "Tên Môn Học";
             // 
@@ -139,9 +139,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(161, 24);
+            this.label5.Location = new System.Drawing.Point(12, 62);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 22);
+            this.label5.Size = new System.Drawing.Size(110, 24);
             this.label5.TabIndex = 102;
             this.label5.Text = "ID Môn Học";
             // 

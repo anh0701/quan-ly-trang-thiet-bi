@@ -56,8 +56,9 @@ namespace NCKH
         }
         private void loaddtgvMT()
         {
-            string strQuery = "SELECT * FROM TaiKhoan";
+            string strQuery = "SELECT Phong.TenPhong, MayTinh.TenMayTinh,MayTinh.ChucNangMayTinh,MayTinh.MaBanPhimMayTinh,MayTinh.MaChuotMayTinh,MayTinh.MaCaseMayTinh,MayTinh.MaManHinhMayTinh, ChiTietMayTinhCoTrongPhong.SoLuong,ChiTietMayTinhCoTrongPhong.MaDonVi, MayTinh.TrangThai FROM MayTinh INNER JOIN ChiTietMayTinhCoTrongPhong ON MayTinh.MaMayTinh = ChiTietMayTinhCoTrongPhong.MaMayTinh INNER JOIN Phong ON ChiTietMayTinhCoTrongPhong.MaPhong = Phong.MaPhong WHERE Phong.MaPhong = @maPhong";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@maPhong", txbMaPhongTTB.Text);
             DataTable table = Database.Query(strQuery, parameters);
             dtgrvChiTietMT.DataSource = table;
 

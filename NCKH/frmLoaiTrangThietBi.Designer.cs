@@ -65,7 +65,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(766, 69);
+            this.button3.Location = new System.Drawing.Point(820, 81);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(76, 27);
             this.button3.TabIndex = 109;
@@ -75,7 +75,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(872, 69);
+            this.button2.Location = new System.Drawing.Point(926, 81);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 27);
             this.button2.TabIndex = 108;
@@ -85,7 +85,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(872, 127);
+            this.button4.Location = new System.Drawing.Point(926, 139);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 27);
             this.button4.TabIndex = 107;
@@ -95,7 +95,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(766, 127);
+            this.button5.Location = new System.Drawing.Point(820, 139);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 27);
             this.button5.TabIndex = 106;
@@ -105,7 +105,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(238, 149);
+            this.textBox1.Location = new System.Drawing.Point(274, 143);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(319, 27);
             this.textBox1.TabIndex = 105;
@@ -114,7 +114,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 148);
+            this.label2.Location = new System.Drawing.Point(59, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 24);
             this.label2.TabIndex = 104;
@@ -123,7 +123,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(238, 69);
+            this.textBox2.Location = new System.Drawing.Point(274, 63);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(319, 27);
             this.textBox2.TabIndex = 103;
@@ -132,7 +132,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 69);
+            this.label5.Location = new System.Drawing.Point(59, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 24);
             this.label5.TabIndex = 102;

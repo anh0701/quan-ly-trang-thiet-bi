@@ -38,14 +38,6 @@
             this.txbtimkiemTTB = new System.Windows.Forms.TextBox();
             this.cbtimkiemTTB = new System.Windows.Forms.ComboBox();
             this.dtgrvMayTinh = new System.Windows.Forms.DataGridView();
-            this.ColMaMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTenMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColChuot = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColManHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColBanPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColChucNangMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -70,6 +62,14 @@
             this.label13 = new System.Windows.Forms.Label();
             this.cbDonViTTB = new System.Windows.Forms.ComboBox();
             this.cbMaTrangThietBi = new System.Windows.Forms.ComboBox();
+            this.ColMaMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTenMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColChuot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColManHinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColBanPhim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColChucNangMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgrvMayTinh)).BeginInit();
@@ -198,70 +198,6 @@
             this.dtgrvMayTinh.RowTemplate.Height = 24;
             this.dtgrvMayTinh.Size = new System.Drawing.Size(1180, 461);
             this.dtgrvMayTinh.TabIndex = 76;
-            // 
-            // ColMaMayTinh
-            // 
-            this.ColMaMayTinh.DataPropertyName = "MaMaTinh";
-            this.ColMaMayTinh.HeaderText = "Mã máy tính";
-            this.ColMaMayTinh.MinimumWidth = 6;
-            this.ColMaMayTinh.Name = "ColMaMayTinh";
-            this.ColMaMayTinh.Width = 125;
-            // 
-            // ColTenMayTinh
-            // 
-            this.ColTenMayTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColTenMayTinh.DataPropertyName = "TenMayTinh";
-            this.ColTenMayTinh.HeaderText = "Tên máy tính";
-            this.ColTenMayTinh.MinimumWidth = 6;
-            this.ColTenMayTinh.Name = "ColTenMayTinh";
-            // 
-            // ColCase
-            // 
-            this.ColCase.DataPropertyName = "MaCaseMayTinh";
-            this.ColCase.HeaderText = "Case";
-            this.ColCase.MinimumWidth = 6;
-            this.ColCase.Name = "ColCase";
-            this.ColCase.Width = 125;
-            // 
-            // ColChuot
-            // 
-            this.ColChuot.DataPropertyName = "MaChuotMayTinh";
-            this.ColChuot.HeaderText = "Chuột";
-            this.ColChuot.MinimumWidth = 6;
-            this.ColChuot.Name = "ColChuot";
-            this.ColChuot.Width = 125;
-            // 
-            // ColManHinh
-            // 
-            this.ColManHinh.DataPropertyName = "MaManHinhMayTinh";
-            this.ColManHinh.HeaderText = "Màn hình";
-            this.ColManHinh.MinimumWidth = 6;
-            this.ColManHinh.Name = "ColManHinh";
-            this.ColManHinh.Width = 125;
-            // 
-            // ColBanPhim
-            // 
-            this.ColBanPhim.DataPropertyName = "MaBanPhimMayTinh";
-            this.ColBanPhim.HeaderText = "Bàn phím";
-            this.ColBanPhim.MinimumWidth = 6;
-            this.ColBanPhim.Name = "ColBanPhim";
-            this.ColBanPhim.Width = 125;
-            // 
-            // ColChucNangMayTinh
-            // 
-            this.ColChucNangMayTinh.DataPropertyName = "ChucNangMayTinh";
-            this.ColChucNangMayTinh.HeaderText = "Chức năng máy tính";
-            this.ColChucNangMayTinh.MinimumWidth = 6;
-            this.ColChucNangMayTinh.Name = "ColChucNangMayTinh";
-            this.ColChucNangMayTinh.Width = 125;
-            // 
-            // ColTrangThai
-            // 
-            this.ColTrangThai.DataPropertyName = "TrangThai";
-            this.ColTrangThai.HeaderText = "Trạng thái";
-            this.ColTrangThai.MinimumWidth = 6;
-            this.ColTrangThai.Name = "ColTrangThai";
-            this.ColTrangThai.Width = 125;
             // 
             // panel2
             // 
@@ -417,7 +353,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(20, 94);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(86, 16);
+            this.label9.Size = new System.Drawing.Size(94, 17);
             this.label9.TabIndex = 91;
             this.label9.Text = "Tên máy tính:";
             // 
@@ -437,7 +373,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(690, 48);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 16);
+            this.label14.Size = new System.Drawing.Size(44, 17);
             this.label14.TabIndex = 86;
             this.label14.Text = "Case:";
             // 
@@ -448,7 +384,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(690, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 87;
             this.label4.Text = "Chuột:";
             // 
@@ -459,7 +395,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(929, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 86;
             this.label3.Text = "Màn hình:";
             // 
@@ -470,7 +406,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(929, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 87;
             this.label2.Text = "Bàn phím:";
             // 
@@ -482,7 +418,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(370, 45);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 16);
+            this.label11.Size = new System.Drawing.Size(137, 17);
             this.label11.TabIndex = 86;
             this.label11.Text = "Chức năng máy tính:";
             // 
@@ -494,7 +430,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(380, 95);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 16);
+            this.label12.Size = new System.Drawing.Size(77, 17);
             this.label12.TabIndex = 87;
             this.label12.Text = "Trạng thái:";
             // 
@@ -505,7 +441,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(20, 44);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 16);
+            this.label13.Size = new System.Drawing.Size(88, 17);
             this.label13.TabIndex = 88;
             this.label13.Text = "Mã máy tính:";
             // 
@@ -531,6 +467,70 @@
             this.cbMaTrangThietBi.Size = new System.Drawing.Size(121, 24);
             this.cbMaTrangThietBi.TabIndex = 79;
             // 
+            // ColMaMayTinh
+            // 
+            this.ColMaMayTinh.DataPropertyName = "MaMayTinh";
+            this.ColMaMayTinh.HeaderText = "Mã máy tính";
+            this.ColMaMayTinh.MinimumWidth = 6;
+            this.ColMaMayTinh.Name = "ColMaMayTinh";
+            this.ColMaMayTinh.Width = 125;
+            // 
+            // ColTenMayTinh
+            // 
+            this.ColTenMayTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColTenMayTinh.DataPropertyName = "TenMayTinh";
+            this.ColTenMayTinh.HeaderText = "Tên máy tính";
+            this.ColTenMayTinh.MinimumWidth = 6;
+            this.ColTenMayTinh.Name = "ColTenMayTinh";
+            // 
+            // ColCase
+            // 
+            this.ColCase.DataPropertyName = "MaCaseMayTinh";
+            this.ColCase.HeaderText = "Case";
+            this.ColCase.MinimumWidth = 6;
+            this.ColCase.Name = "ColCase";
+            this.ColCase.Width = 125;
+            // 
+            // ColChuot
+            // 
+            this.ColChuot.DataPropertyName = "MaChuotMayTinh";
+            this.ColChuot.HeaderText = "Chuột";
+            this.ColChuot.MinimumWidth = 6;
+            this.ColChuot.Name = "ColChuot";
+            this.ColChuot.Width = 125;
+            // 
+            // ColManHinh
+            // 
+            this.ColManHinh.DataPropertyName = "MaManHinhMayTinh";
+            this.ColManHinh.HeaderText = "Màn hình";
+            this.ColManHinh.MinimumWidth = 6;
+            this.ColManHinh.Name = "ColManHinh";
+            this.ColManHinh.Width = 125;
+            // 
+            // ColBanPhim
+            // 
+            this.ColBanPhim.DataPropertyName = "MaBanPhimMayTinh";
+            this.ColBanPhim.HeaderText = "Bàn phím";
+            this.ColBanPhim.MinimumWidth = 6;
+            this.ColBanPhim.Name = "ColBanPhim";
+            this.ColBanPhim.Width = 125;
+            // 
+            // ColChucNangMayTinh
+            // 
+            this.ColChucNangMayTinh.DataPropertyName = "ChucNangMayTinh";
+            this.ColChucNangMayTinh.HeaderText = "Chức năng máy tính";
+            this.ColChucNangMayTinh.MinimumWidth = 6;
+            this.ColChucNangMayTinh.Name = "ColChucNangMayTinh";
+            this.ColChucNangMayTinh.Width = 125;
+            // 
+            // ColTrangThai
+            // 
+            this.ColTrangThai.DataPropertyName = "TrangThai";
+            this.ColTrangThai.HeaderText = "Trạng thái";
+            this.ColTrangThai.MinimumWidth = 6;
+            this.ColTrangThai.Name = "ColTrangThai";
+            this.ColTrangThai.Width = 125;
+            // 
             // frmMayTinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -545,6 +545,7 @@
             this.Controls.Add(this.btnSua);
             this.Name = "frmMayTinh";
             this.Text = "Máy tính";
+            this.Load += new System.EventHandler(this.frmMayTinh_Load);
             this.panel3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -588,6 +589,11 @@
         private System.Windows.Forms.TextBox txbtimkiemTTB;
         private System.Windows.Forms.ComboBox cbtimkiemTTB;
         private System.Windows.Forms.DataGridView dtgrvMayTinh;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMaMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTenMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCase;
@@ -596,10 +602,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColBanPhim;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColChucNangMayTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTrangThai;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
     }
 }

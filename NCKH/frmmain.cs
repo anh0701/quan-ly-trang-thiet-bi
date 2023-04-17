@@ -17,12 +17,22 @@ namespace NCKH
         {
             InitializeComponent();
             hideBut();
+            if(Program.Quyen=="Kĩ thuật viên")
+            {
+                button2.Visible = false;
+                button5.Visible = false;
+                button6.Visible = false;
+                button10.Visible = false;
+                button12.Visible = false;
+            }
         }
         private void hideBut()
         {
             panel3.Visible = false;
             panel4.Visible = false;
             panel5.Visible = false;
+            
+
         }
 
         private void hidePanel3()
@@ -113,6 +123,10 @@ namespace NCKH
         {
             //hidePanel3();
             OpenChildForm(new frmQuanLyTaiKhoan());
+            if (Program.Quyen == "Admin")
+            {
+                OpenChildForm(new frmQuanLyTaiKhoan());
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -129,13 +143,14 @@ namespace NCKH
         private void button9_Click(object sender, EventArgs e)
         {
             showPanel5(panel5);
-            if (Program.Quyen == "Kĩ thuật viên")
+            if (Program.Quyen == "Admin")
             {
-                OpenChildForm(new FrmQuanLyPhongChoKTV());
+                OpenChildForm(new frmphongmay());
             }
             else 
             {
-                OpenChildForm(new frmphongmay());
+                OpenChildForm(new FrmQuanLyPhongChoKTV());
+                
             }           
         }
 
@@ -147,6 +162,10 @@ namespace NCKH
             }
             else
                 button11.Hide();
+            if (Program.Quyen == "Admin")
+            {
+                OpenChildForm(new FrmTrangThietBi());
+            }
         }
 
 
@@ -201,13 +220,18 @@ namespace NCKH
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frmKhoa());
+        {                 
+                OpenChildForm(new frmKhoa());
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmMonHoc());
+            if (Program.Quyen == "Kĩ thuật viên")
+            {
+                OpenChildForm(new FrmQuanLyPhongChoKTV());
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)

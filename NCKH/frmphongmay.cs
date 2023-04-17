@@ -12,9 +12,14 @@ namespace NCKH
 {
     public partial class frmphongmay : Form
     {
-       
-        
 
+
+        public frmphongmay()
+        {
+            InitializeComponent();
+            loaddgv();
+            cbbMaChucNang.DataSource = Database.Query("Select*from ChucNangPhong", new Dictionary<string, object>());
+        }
         private void btnXoa_Click(object sender, EventArgs e)
         {
             string strCommand = "EXEC spXoaPhong @maPhong";
@@ -99,13 +104,55 @@ namespace NCKH
 
         private void dtgPhongMay_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtMaPM.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clMaPM"].Value.ToString();
-            txtTenPM.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clTenPM"].Value.ToString();
+            MaPhong= txtMaPM.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clMaPM"].Value.ToString();
+            TenPhong= txtTenPM.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clTenPM"].Value.ToString();
             cbbMaChucNang.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clCN"].Value.ToString();            
             cbbTrangThai.Text = dtgPhongMay.Rows[e.RowIndex].Cells["clTrangThai"].Value.ToString();
         }
 
         private void frmphongmay_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void dtgPhongMay_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int currentMouseOverRow = dtgPhongMay.HitTest(e.X, e.Y).RowIndex;
+
+                if (currentMouseOverRow >= 0)
+                {
+                    // Select the row
+                    dtgPhongMay.ClearSelection();
+                    dtgPhongMay.Rows[currentMouseOverRow].Selected = true;
+
+                    // Create a new ContextMenuStrip
+                    ContextMenuStrip contextMenu = new ContextMenuStrip();
+
+                    // Add some options to the menu
+                    ToolStripMenuItem chinhSua = new ToolStripMenuItem("Chỉnh sửa");
+                    contextMenu.Items.Add(chinhSua);
+                    ToolStripMenuItem Xoa = new ToolStripMenuItem("Xóa");
+                    contextMenu.Items.Add(Xoa);
+
+                    chinhSua.Click += new EventHandler(chinhSua_Click);
+
+                    // Show the menu at the location of the mouse click
+                    contextMenu.Show(dtgPhongMay, e.Location);
+                }
+            }
+        }
+        private void chinhSua_Click(object sender, EventArgs e)
+        {
+            FrmThemTrangThietBi form2 = new FrmThemTrangThietBi();
+            form2.txbMaPhongMH.Text = form2.txbMaPhongMT.Text = form2.txbMaPhongPM.Text = form2.txbMaPhongTTB.Text = MaPhong;
+            form2.txbTenPhongMH.Text = form2.txbTenPhongMT.Text = form2.txbTenPhongPM.Text = form2.txbTenPhongTTB.Text = TenPhong;
+            form2.ShowDialog();
+        }
+        string MaPhong;
+        string TenPhong;
+        
+        private void frmphongmay_Load_1(object sender, EventArgs e)
         {
 
         }

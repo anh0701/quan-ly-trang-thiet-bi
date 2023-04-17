@@ -122,9 +122,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(189, 116);
+            this.label2.Location = new System.Drawing.Point(43, 143);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 22);
+            this.label2.Size = new System.Drawing.Size(93, 24);
             this.label2.TabIndex = 95;
             this.label2.Text = "Tên Khoa";
             // 
@@ -140,9 +140,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(189, 48);
+            this.label5.Location = new System.Drawing.Point(43, 79);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 22);
+            this.label5.Size = new System.Drawing.Size(76, 24);
             this.label5.TabIndex = 93;
             this.label5.Text = "ID Khoa";
             // 

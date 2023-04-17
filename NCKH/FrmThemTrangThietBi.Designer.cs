@@ -32,6 +32,7 @@ namespace NCKH
             this.tabContraol = new System.Windows.Forms.TabControl();
             this.tabTrangThietBi = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txbDonViTTB = new System.Windows.Forms.TextBox();
             this.txbTenTrangThietBi = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txbTenPhongTTB = new System.Windows.Forms.TextBox();
@@ -52,18 +53,20 @@ namespace NCKH
             this.txbtimkiemTTB = new System.Windows.Forms.TextBox();
             this.cbtimkiemTTB = new System.Windows.Forms.ComboBox();
             this.dtgrvChiTietTTB = new System.Windows.Forms.DataGridView();
+            this.ColTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTenTrangThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColThongSoKiThuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabMayTinh = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.txbTimKiemMT = new System.Windows.Forms.TextBox();
             this.cbTimKiemMT = new System.Windows.Forms.ComboBox();
             this.dtgrvChiTietMT = new System.Windows.Forms.DataGridView();
-            this.ColMaChiTietMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMaMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txbDonViMT = new System.Windows.Forms.TextBox();
             this.txbTenMayTinh = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbTenPhongMT = new System.Windows.Forms.TextBox();
@@ -81,6 +84,7 @@ namespace NCKH
             this.cbMaMayTinh = new System.Windows.Forms.ComboBox();
             this.tabMonHoc = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.txbTimKiemMH = new System.Windows.Forms.TextBox();
             this.cbTimKiemMH = new System.Windows.Forms.ComboBox();
@@ -123,14 +127,16 @@ namespace NCKH
             this.ColMaChiTietPhanMem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMaPhanMem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txbDonViTTB = new System.Windows.Forms.TextBox();
-            this.txbDonViMT = new System.Windows.Forms.TextBox();
-            this.ColTenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTenTrangThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColThongSoKiThuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTenPhongMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTenMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColChucNang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMaMH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMaCase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSoLuongMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDonViMT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTrangThaiMayTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabContraol.SuspendLayout();
             this.tabTrangThietBi.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -201,6 +207,14 @@ namespace NCKH
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1325, 138);
             this.panel3.TabIndex = 6;
+            // 
+            // txbDonViTTB
+            // 
+            this.txbDonViTTB.Location = new System.Drawing.Point(992, 83);
+            this.txbDonViTTB.Name = "txbDonViTTB";
+            this.txbDonViTTB.ReadOnly = true;
+            this.txbDonViTTB.Size = new System.Drawing.Size(120, 22);
+            this.txbDonViTTB.TabIndex = 10;
             // 
             // txbTenTrangThietBi
             // 
@@ -415,6 +429,55 @@ namespace NCKH
             this.dtgrvChiTietTTB.Size = new System.Drawing.Size(1318, 514);
             this.dtgrvChiTietTTB.TabIndex = 0;
             // 
+            // ColTenPhong
+            // 
+            this.ColTenPhong.DataPropertyName = "TenPhong";
+            this.ColTenPhong.FillWeight = 50F;
+            this.ColTenPhong.HeaderText = "Tên Phòng";
+            this.ColTenPhong.MinimumWidth = 6;
+            this.ColTenPhong.Name = "ColTenPhong";
+            this.ColTenPhong.Width = 125;
+            // 
+            // ColTenTrangThietBi
+            // 
+            this.ColTenTrangThietBi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColTenTrangThietBi.DataPropertyName = "TenTrangThietBi";
+            this.ColTenTrangThietBi.HeaderText = "Tên trang thiết bị";
+            this.ColTenTrangThietBi.MinimumWidth = 6;
+            this.ColTenTrangThietBi.Name = "ColTenTrangThietBi";
+            // 
+            // ColSoLuong
+            // 
+            this.ColSoLuong.DataPropertyName = "SoLuong";
+            this.ColSoLuong.HeaderText = "Số lượng";
+            this.ColSoLuong.MinimumWidth = 6;
+            this.ColSoLuong.Name = "ColSoLuong";
+            this.ColSoLuong.Width = 125;
+            // 
+            // ColDonVi
+            // 
+            this.ColDonVi.DataPropertyName = "MaDonVi";
+            this.ColDonVi.HeaderText = "Đơn vị tính";
+            this.ColDonVi.MinimumWidth = 6;
+            this.ColDonVi.Name = "ColDonVi";
+            this.ColDonVi.Width = 125;
+            // 
+            // ColThongSoKiThuat
+            // 
+            this.ColThongSoKiThuat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColThongSoKiThuat.DataPropertyName = "ThongSoKiThuat";
+            this.ColThongSoKiThuat.HeaderText = "Thông số kĩ thuật";
+            this.ColThongSoKiThuat.MinimumWidth = 6;
+            this.ColThongSoKiThuat.Name = "ColThongSoKiThuat";
+            // 
+            // ColTrangThai
+            // 
+            this.ColTrangThai.DataPropertyName = "TrangThai";
+            this.ColTrangThai.HeaderText = "Trạng Thái";
+            this.ColTrangThai.MinimumWidth = 6;
+            this.ColTrangThai.Name = "ColTrangThai";
+            this.ColTrangThai.Width = 125;
+            // 
             // tabMayTinh
             // 
             this.tabMayTinh.Controls.Add(this.panel1);
@@ -478,58 +541,22 @@ namespace NCKH
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgrvChiTietMT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgrvChiTietMT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColMaChiTietMayTinh,
-            this.dataGridViewTextBoxColumn3,
-            this.ColMaMayTinh,
+            this.ColTenPhongMT,
+            this.ColTenMayTinh,
+            this.ColChucNang,
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
+            this.ColMaMH,
+            this.dataGridViewTextBoxColumn2,
+            this.ColMaCase,
+            this.ColSoLuongMT,
+            this.ColDonViMT,
+            this.ColTrangThaiMayTinh});
             this.dtgrvChiTietMT.Location = new System.Drawing.Point(5, 36);
             this.dtgrvChiTietMT.Name = "dtgrvChiTietMT";
             this.dtgrvChiTietMT.RowHeadersWidth = 51;
             this.dtgrvChiTietMT.RowTemplate.Height = 24;
             this.dtgrvChiTietMT.Size = new System.Drawing.Size(1313, 510);
             this.dtgrvChiTietMT.TabIndex = 0;
-            // 
-            // ColMaChiTietMayTinh
-            // 
-            this.ColMaChiTietMayTinh.DataPropertyName = "MaChiTietMayTinhCoTrongPhong";
-            this.ColMaChiTietMayTinh.FillWeight = 50F;
-            this.ColMaChiTietMayTinh.HeaderText = "STT";
-            this.ColMaChiTietMayTinh.MinimumWidth = 6;
-            this.ColMaChiTietMayTinh.Name = "ColMaChiTietMayTinh";
-            this.ColMaChiTietMayTinh.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "MaPhong";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Mã Phòng";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // ColMaMayTinh
-            // 
-            this.ColMaMayTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMaMayTinh.DataPropertyName = "MaMayTinh";
-            this.ColMaMayTinh.HeaderText = "Mã máy tính";
-            this.ColMaMayTinh.MinimumWidth = 6;
-            this.ColMaMayTinh.Name = "ColMaMayTinh";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "SoLuong";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Số lượng";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaDonVi";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Đơn vị tính";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // panel4
             // 
@@ -555,6 +582,15 @@ namespace NCKH
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1322, 138);
             this.panel4.TabIndex = 8;
+            // 
+            // txbDonViMT
+            // 
+            this.txbDonViMT.Location = new System.Drawing.Point(964, 76);
+            this.txbDonViMT.Name = "txbDonViMT";
+            this.txbDonViMT.ReadOnly = true;
+            this.txbDonViMT.Size = new System.Drawing.Size(120, 22);
+            this.txbDonViMT.TabIndex = 11;
+            this.txbDonViMT.Text = "Bộ";
             // 
             // txbTenMayTinh
             // 
@@ -692,6 +728,7 @@ namespace NCKH
             this.dupSoLuongMT.ReadOnly = true;
             this.dupSoLuongMT.Size = new System.Drawing.Size(120, 22);
             this.dupSoLuongMT.TabIndex = 1;
+            this.dupSoLuongMT.Text = "1";
             // 
             // cbMaMayTinh
             // 
@@ -721,6 +758,7 @@ namespace NCKH
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.txbTimKiemMH);
             this.panel5.Controls.Add(this.cbTimKiemMH);
@@ -729,6 +767,15 @@ namespace NCKH
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1327, 557);
             this.panel5.TabIndex = 7;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1194, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(127, 26);
+            this.button3.TabIndex = 52;
+            this.button3.Text = "Thêm phần mềm";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -1183,71 +1230,81 @@ namespace NCKH
             this.ColMaPhanMem.MinimumWidth = 6;
             this.ColMaPhanMem.Name = "ColMaPhanMem";
             // 
-            // txbDonViTTB
+            // ColTenPhongMT
             // 
-            this.txbDonViTTB.Location = new System.Drawing.Point(992, 83);
-            this.txbDonViTTB.Name = "txbDonViTTB";
-            this.txbDonViTTB.ReadOnly = true;
-            this.txbDonViTTB.Size = new System.Drawing.Size(120, 22);
-            this.txbDonViTTB.TabIndex = 10;
+            this.ColTenPhongMT.DataPropertyName = "TenPhong";
+            this.ColTenPhongMT.FillWeight = 50F;
+            this.ColTenPhongMT.HeaderText = "Tên Phòng";
+            this.ColTenPhongMT.MinimumWidth = 6;
+            this.ColTenPhongMT.Name = "ColTenPhongMT";
+            this.ColTenPhongMT.Width = 90;
             // 
-            // txbDonViMT
+            // ColTenMayTinh
             // 
-            this.txbDonViMT.Location = new System.Drawing.Point(964, 76);
-            this.txbDonViMT.Name = "txbDonViMT";
-            this.txbDonViMT.ReadOnly = true;
-            this.txbDonViMT.Size = new System.Drawing.Size(120, 22);
-            this.txbDonViMT.TabIndex = 11;
-            this.txbDonViMT.Text = "Bộ";
+            this.ColTenMayTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColTenMayTinh.DataPropertyName = "TenMayTinh";
+            this.ColTenMayTinh.HeaderText = "Tên Máy Tính";
+            this.ColTenMayTinh.MinimumWidth = 6;
+            this.ColTenMayTinh.Name = "ColTenMayTinh";
             // 
-            // ColTenPhong
+            // ColChucNang
             // 
-            this.ColTenPhong.DataPropertyName = "TenPhong";
-            this.ColTenPhong.FillWeight = 50F;
-            this.ColTenPhong.HeaderText = "Tên Phòng";
-            this.ColTenPhong.MinimumWidth = 6;
-            this.ColTenPhong.Name = "ColTenPhong";
-            this.ColTenPhong.Width = 125;
+            this.ColChucNang.DataPropertyName = "ChucNangMayTinh";
+            this.ColChucNang.HeaderText = "Chức năng máy tính";
+            this.ColChucNang.MinimumWidth = 6;
+            this.ColChucNang.Name = "ColChucNang";
             // 
-            // ColTenTrangThietBi
+            // dataGridViewTextBoxColumn1
             // 
-            this.ColTenTrangThietBi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColTenTrangThietBi.DataPropertyName = "TenTrangThietBi";
-            this.ColTenTrangThietBi.HeaderText = "Tên trang thiết bị";
-            this.ColTenTrangThietBi.MinimumWidth = 6;
-            this.ColTenTrangThietBi.Name = "ColTenTrangThietBi";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaBanPhimMayTinh";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã Bàn Phím";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // ColSoLuong
+            // ColMaMH
             // 
-            this.ColSoLuong.DataPropertyName = "SoLuong";
-            this.ColSoLuong.HeaderText = "Số lượng";
-            this.ColSoLuong.MinimumWidth = 6;
-            this.ColSoLuong.Name = "ColSoLuong";
-            this.ColSoLuong.Width = 125;
+            this.ColMaMH.DataPropertyName = "MaManHinhMayTinh";
+            this.ColMaMH.HeaderText = "Mã Màn Hình";
+            this.ColMaMH.MinimumWidth = 6;
+            this.ColMaMH.Name = "ColMaMH";
             // 
-            // ColDonVi
+            // dataGridViewTextBoxColumn2
             // 
-            this.ColDonVi.DataPropertyName = "MaDonVi";
-            this.ColDonVi.HeaderText = "Đơn vị tính";
-            this.ColDonVi.MinimumWidth = 6;
-            this.ColDonVi.Name = "ColDonVi";
-            this.ColDonVi.Width = 125;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MaChuotMayTinh";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Mã Chuột";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // ColThongSoKiThuat
+            // ColMaCase
             // 
-            this.ColThongSoKiThuat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColThongSoKiThuat.DataPropertyName = "ThongSoKiThuat";
-            this.ColThongSoKiThuat.HeaderText = "Thông số kĩ thuật";
-            this.ColThongSoKiThuat.MinimumWidth = 6;
-            this.ColThongSoKiThuat.Name = "ColThongSoKiThuat";
+            this.ColMaCase.DataPropertyName = "MaCaseMayTinh";
+            this.ColMaCase.HeaderText = "Mã Case";
+            this.ColMaCase.MinimumWidth = 6;
+            this.ColMaCase.Name = "ColMaCase";
             // 
-            // ColTrangThai
+            // ColSoLuongMT
             // 
-            this.ColTrangThai.DataPropertyName = "TrangThai";
-            this.ColTrangThai.HeaderText = "Trạng Thái";
-            this.ColTrangThai.MinimumWidth = 6;
-            this.ColTrangThai.Name = "ColTrangThai";
-            this.ColTrangThai.Width = 125;
+            this.ColSoLuongMT.DataPropertyName = "SoLuong";
+            this.ColSoLuongMT.HeaderText = "Số Lượng";
+            this.ColSoLuongMT.MinimumWidth = 6;
+            this.ColSoLuongMT.Name = "ColSoLuongMT";
+            this.ColSoLuongMT.Width = 80;
+            // 
+            // ColDonViMT
+            // 
+            this.ColDonViMT.DataPropertyName = "MaDonVi";
+            this.ColDonViMT.HeaderText = "Đơn vị ";
+            this.ColDonViMT.MinimumWidth = 6;
+            this.ColDonViMT.Name = "ColDonViMT";
+            this.ColDonViMT.Width = 80;
+            // 
+            // ColTrangThaiMayTinh
+            // 
+            this.ColTrangThaiMayTinh.DataPropertyName = "TrangThai";
+            this.ColTrangThaiMayTinh.HeaderText = "Trạng Thái";
+            this.ColTrangThaiMayTinh.MinimumWidth = 6;
+            this.ColTrangThaiMayTinh.Name = "ColTrangThaiMayTinh";
+            this.ColTrangThaiMayTinh.Width = 125;
             // 
             // FrmThemTrangThietBi
             // 
@@ -1256,7 +1313,7 @@ namespace NCKH
             this.ClientSize = new System.Drawing.Size(1336, 731);
             this.Controls.Add(this.tabContraol);
             this.Name = "FrmThemTrangThietBi";
-            this.Text = "FrmThemTrangThietBi";
+            this.Text = "Quản lý trang thiết bị";
             this.Load += new System.EventHandler(this.FrmThemTrangThietBi_Load);
             this.tabContraol.ResumeLayout(false);
             this.tabTrangThietBi.ResumeLayout(false);
@@ -1318,11 +1375,6 @@ namespace NCKH
         private System.Windows.Forms.TextBox txbTimKiemMT;
         private System.Windows.Forms.ComboBox cbTimKiemMT;
         private System.Windows.Forms.DataGridView dtgrvChiTietMT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaChiTietMayTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaMayTinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txbTenMayTinh;
         private System.Windows.Forms.Label label7;
@@ -1391,5 +1443,16 @@ namespace NCKH
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDonVi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColThongSoKiThuat;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTrangThai;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTenPhongMT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTenMayTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColChucNang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaMH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMaCase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSoLuongMT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDonViMT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTrangThaiMayTinh;
     }
 }

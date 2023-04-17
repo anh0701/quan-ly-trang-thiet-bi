@@ -13,11 +13,9 @@ namespace NCKH
     public partial class frmQuanLyTaiKhoan : Form
     {
 
-        List<string> listcbquyen = new List<string> { "admin","Trưởng khoa","Kĩ thuật viên" };
+        List<string> listcbquyen = new List<string> { "Admin","Kĩ thuật viên" };
         List<string> listcbtrangthai = new List<string> { "Hoạt động", "Khóa" };
         List<string> listcbtimkiem = new List<string> { "None","Tên đăng nhập", "Tên người dùng", "Quyền" ,"Khoa","Phòng", "Trạng thái" };
-        List<string> listcbkhoa = new List<string> { "None","CNTT", "KT", "CT"};
-        List<string> listcbphongquanly = new List<string> { "None","P305", "P306", "P307", "P308" };
         
 
 
@@ -27,10 +25,9 @@ namespace NCKH
             InitializeComponent();
             loaddtgvTaiKhoan();
             cbquyen.DataSource = listcbquyen;
-            cbtrangthai.DataSource = listcbtrangthai;
+            cbbTrangThai.DataSource = listcbtrangthai;
             cbtimkiem.DataSource = listcbtimkiem;
-            cbkhoa.DataSource = listcbkhoa;
-            cbphongquanly.DataSource = listcbphongquanly;
+            cbkhoa.DataSource = Database.Query("SELECT * FROM Khoa", new Dictionary<string, object>());
         }
         private void loaddtgvTaiKhoan()
         {
@@ -39,6 +36,43 @@ namespace NCKH
             DataTable table = Database.Query(strQuery, parameters);
             dtgvTaiKhoan.DataSource = table;
 
+        }
+        private void dtgvTaiKhoan_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int currentMouseOverRow = dtgvTaiKhoan.HitTest(e.X, e.Y).RowIndex;
+
+                if (currentMouseOverRow >= 0)
+                {
+                    // Select the row
+                    dtgvTaiKhoan.ClearSelection();
+                    dtgvTaiKhoan.Rows[currentMouseOverRow].Selected = true;
+
+                    // Create a new ContextMenuStrip
+                    ContextMenuStrip contextMenu = new ContextMenuStrip();
+
+                    // Add some options to the menu
+                    ToolStripMenuItem chinhSua = new ToolStripMenuItem("Thêm phòng quản lý");
+                    contextMenu.Items.Add(chinhSua);
+                    ToolStripMenuItem ChinhSua = new ToolStripMenuItem("Chỉnh sửa");
+                    contextMenu.Items.Add(ChinhSua);
+                    ToolStripMenuItem Xoa = new ToolStripMenuItem("Xóa");
+                    contextMenu.Items.Add(Xoa);
+
+                    chinhSua.Click += new EventHandler(chinhSua_Click);
+
+                    // Show the menu at the location of the mouse click
+                    contextMenu.Show(dtgvTaiKhoan, e.Location);
+                }
+            }
+        }
+        private void chinhSua_Click(object sender, EventArgs e)
+        {
+            ThemPhongQuanLy form2 = new ThemPhongQuanLy();
+            form2.Text = ten;
+            ThemPhongQuanLy.TenDN = ten;
+            form2.ShowDialog();
         }
         private bool checkForm()
         {
@@ -88,31 +122,24 @@ namespace NCKH
             return ketQua;
 
         }
-                
+         string ten;
         private void dtgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow i = dtgvTaiKhoan.Rows[e.RowIndex];
-                txbtendangnhap.Text = i.Cells["colTenDangNhap"].Value.ToString();
-                txbtennguoidung.Text = i.Cells["colTenNguoiDung"].Value.ToString();
-                txbmatkhau.Text = i.Cells["colMatKhau"].Value.ToString();
-                cbquyen.Text = i.Cells["colQuyen"].Value.ToString();
-                cbkhoa.Text = i.Cells["colKhoa"].Value.ToString();
-                cbphongquanly.Text = i.Cells["colPhongQuanLy"].Value.ToString();
+                ten = txbtendangnhap.Text = i.Cells["ColTenDangNhap"].Value.ToString();
+                txbtennguoidung.Text = i.Cells["ColTenNguoiDung"].Value.ToString();
+                cbquyen.Text = i.Cells["ColQuyen"].Value.ToString();
+                cbkhoa.Text = i.Cells["ColMaKhoa"].Value.ToString();
+                cbbTrangThai.Text = i.Cells["ColTrangThai"].Value.ToString();
+                txbEmail.Text = i.Cells["ColEmail"].Value.ToString();
+                txbSoDienThoai.Text = i.Cells["ColSDT"].Value.ToString();
 
-                if (i.Cells["colTrangThai"].Value.ToString() == "True")
-                {
-                    cbtrangthai.Text = "Hoạt động";
-                }
-                if (i.Cells["colTrangThai"].Value.ToString() == "False")
-                {
-                    cbtrangthai.Text = "Khóa";
-                }
             }
         }
 
-        private void txbtimkiem_TextChanged_1(object sender, EventArgs e)
+        private void txbtimkiem_TextChanged(object sender, EventArgs e)
         {
             if (cbtimkiem.Text == "Tên đăng nhập")
             {
@@ -130,27 +157,8 @@ namespace NCKH
             }
             if (cbtimkiem.Text == "Trạng thái")
             {
-                string trangThai = txbtimkiem.Text.Trim();
-                bool? isActive = null;
-                if (trangThai == "Hoạt động")
-                {
-                    isActive = true;
-                }
-                else if (trangThai == "Khóa")
-                {
-                    isActive = false;
-                }
-                string str;
+                string str = "Select *from TaiKhoan where TrangThai LIKE '%' + N'" + cbbTrangThai.Text + "' + '%'";
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
-                if (isActive != null)
-                {
-                    str = "SELECT * FROM TaiKhoan WHERE TrangThai = @trangThai";
-                    parameters.Add("@trangThai", isActive);
-                }
-                else
-                {
-                    str = "SELECT * FROM TaiKhoan";
-                }
                 DataTable table = Database.Query(str, parameters);
                 dtgvTaiKhoan.DataSource = table;
             }
@@ -168,66 +176,48 @@ namespace NCKH
                 Dictionary<string, object> parameters = new Dictionary<string, object>();
                 DataTable table = Database.Query(str, parameters);
                 dtgvTaiKhoan.DataSource = table;
-            }
-            if (cbtimkiem.Text == "Phòng")
-            {
-                string str = "Select *from TaiKhoan where MaPhong LIKE '%' + N'" + txbtimkiem.Text + "' + '%'";
-                Dictionary<string, object> parameters = new Dictionary<string, object>();
-                DataTable table = Database.Query(str, parameters);
-                dtgvTaiKhoan.DataSource = table;
-            }
+            }           
 
         }
 
-        private void btnSua_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (checkForm() == false)
                 return;
             string strQuery = "SELECT * FROM TaiKhoan WHERE TenDangNhap<>@tenDangNhap ";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("@tenDangNhap", dtgvTaiKhoan.CurrentRow.Cells["colTenDangNhap"].Value.ToString());
+            parameters.Add("@tenDangNhap", dtgvTaiKhoan.CurrentRow.Cells["ColTenDangNhap"].Value.ToString());
             parameters.Add("@matKhau", txbmatkhau.Text);
             parameters.Add("@tenNguoiDung", txbtennguoidung.Text);
+            parameters.Add("@sDT", txbSoDienThoai.Text);
+            parameters.Add("@email", txbEmail.Text);
             parameters.Add("@quyen", cbquyen.Text);
             parameters.Add("@maKhoa", cbkhoa.Text);
-            parameters.Add("@maPhong", cbphongquanly.Text);
-            if (cbtrangthai.Text == "Hoạt động")
-            {
-                parameters.Add("@trangThai", 1);
-            }
-            if (cbtrangthai.Text == "Khóa")
-            {
-                parameters.Add("@trangThai", 0);
-            }
+            parameters.Add("@trangThai", cbbTrangThai.Text);
+
             DataTable table = Database.Query(strQuery, parameters);
 
-            string strCommand = "UPDATE TaiKhoan SET MatKhau=@matKhau, TenNguoiDung=@tenNguoiDung, Quyen=@quyen,MaKhoa=@maKhoa,MaPhong=@maPhong, TrangThai=@trangThai WHERE TenDangNhap=@tenDangNhap";
+            string strCommand = "UPDATE TaiKhoan SET MatKhau=@matKhau, TenNguoiDung=@tenNguoiDung,SDT=@sDT,Email=@email, Quyen=@quyen,MaKhoa=@maKhoa, TrangThai=@trangThai WHERE TenDangNhap=@tenDangNhap";
             Database.Execute(strCommand, parameters);
             loaddtgvTaiKhoan();
             lblStatus.Text = "Thông báo: Sửa dữ liệu thành công";
         }
 
-        private void btnThem_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             eprError.Clear();
             if (checkForm() == false)
                 return;
-            string strCommand = "EXEC spThemTaiKhoan @tenDangNhap, @matKhau, @tenNguoiDung, @quyen,@maKhoa, @maPhong, @trangThai";
+            string strCommand = "EXEC spThemTaiKhoan @tenDangNhap, @matKhau, @tenNguoiDung,@sDT,@email, @quyen,@maKhoa, @trangThai";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("@tenDangNhap", txbtendangnhap.Text);
+            parameters.Add("@tenDangNhap", dtgvTaiKhoan.CurrentRow.Cells["ColTenDangNhap"].Value.ToString());
             parameters.Add("@matKhau", txbmatkhau.Text);
             parameters.Add("@tenNguoiDung", txbtennguoidung.Text);
+            parameters.Add("@sDT", txbSoDienThoai.Text);
+            parameters.Add("@email", txbEmail.Text);
             parameters.Add("@quyen", cbquyen.Text);
             parameters.Add("@maKhoa", cbkhoa.Text);
-            parameters.Add("@maPhong", cbphongquanly.Text);
-            if (cbtrangthai.Text == "Hoạt động")
-            {
-                parameters.Add("@trangThai", 1);
-            }
-            if (cbtrangthai.Text == "Khóa")
-            {
-                parameters.Add("@trangThai", 0);
-            }
+            parameters.Add("@trangThai", cbbTrangThai.Text);
             try
             {
 
@@ -247,6 +237,11 @@ namespace NCKH
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmQuanLyTaiKhoan_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

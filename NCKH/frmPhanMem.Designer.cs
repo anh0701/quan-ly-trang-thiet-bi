@@ -63,14 +63,14 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1239, 227);
+            this.panel1.Size = new System.Drawing.Size(1239, 198);
             this.panel1.TabIndex = 0;
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(706, 72);
+            this.button3.Location = new System.Drawing.Point(713, 51);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(76, 27);
             this.button3.TabIndex = 101;
@@ -80,7 +80,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(182, 72);
+            this.textBox2.Location = new System.Drawing.Point(188, 48);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(343, 27);
             this.textBox2.TabIndex = 94;
@@ -89,7 +89,7 @@
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(824, 130);
+            this.button5.Location = new System.Drawing.Point(831, 109);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(76, 27);
             this.button5.TabIndex = 99;
@@ -100,7 +100,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(178, 45);
+            this.label5.Location = new System.Drawing.Point(28, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 24);
             this.label5.TabIndex = 93;
@@ -110,7 +110,7 @@
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(824, 72);
+            this.button2.Location = new System.Drawing.Point(831, 51);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(76, 27);
             this.button2.TabIndex = 100;
@@ -121,7 +121,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 116);
+            this.label2.Location = new System.Drawing.Point(28, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 24);
             this.label2.TabIndex = 95;
@@ -131,7 +131,7 @@
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(706, 130);
+            this.button4.Location = new System.Drawing.Point(713, 109);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 27);
             this.button4.TabIndex = 98;
@@ -141,7 +141,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(182, 141);
+            this.textBox1.Location = new System.Drawing.Point(188, 117);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(343, 27);
             this.textBox1.TabIndex = 96;
@@ -155,9 +155,9 @@
             this.panel2.Controls.Add(this.txbtimkiemTTB);
             this.panel2.Controls.Add(this.cbtimkiemTTB);
             this.panel2.Controls.Add(this.dtgvPhanMem);
-            this.panel2.Location = new System.Drawing.Point(0, 227);
+            this.panel2.Location = new System.Drawing.Point(0, 197);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1239, 419);
+            this.panel2.Size = new System.Drawing.Size(1239, 449);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -203,7 +203,7 @@
             this.dtgvPhanMem.Name = "dtgvPhanMem";
             this.dtgvPhanMem.RowHeadersWidth = 51;
             this.dtgvPhanMem.RowTemplate.Height = 24;
-            this.dtgvPhanMem.Size = new System.Drawing.Size(1224, 370);
+            this.dtgvPhanMem.Size = new System.Drawing.Size(1224, 400);
             this.dtgvPhanMem.TabIndex = 97;
             // 
             // MaPhanMem
